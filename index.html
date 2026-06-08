@@ -1,0 +1,4328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse · Live Salary Calculator — Watch Your Earnings Tick in Real Time</title>
+
+<!-- ========== SEO / SOCIAL META ========== -->
+<!-- Domain: https://arknove.com -->
+<meta name="description" content="Pulse is a free live salary calculator. Watch your earnings tick up second by second in real time. Enter your monthly salary, daily hours, and working days — then start the clock. Supports USD and CNY, English and Chinese.">
+<meta name="keywords" content="live salary calculator, real-time earnings, salary ticker, hourly wage calculator, paycheck calculator, work time tracker, earnings counter, money per second, salary per minute">
+<meta name="author" content="Pulse">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0a0a0e">
+<link rel="canonical" href="https://arknove.com/">
+<link rel="alternate" hreflang="en" href="https://arknove.com/">
+<link rel="alternate" hreflang="x-default" href="https://arknove.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pulse · Live Salary Calculator — Watch Your Earnings in Real Time">
+<meta property="og:description" content="Watch your salary tick up in real time, second by second. Free live earnings ticker with milestone celebrations.">
+<meta property="og:url" content="https://arknove.com/">
+<meta property="og:site_name" content="Pulse">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:image" content="https://arknove.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pulse — Live Salary Calculator">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pulse · Live Salary Calculator — Watch Your Earnings in Real Time">
+<meta name="twitter:description" content="Watch your salary tick up in real time, second by second.">
+<meta name="twitter:image" content="https://arknove.com/og-image.png">
+
+<!-- Favicon (inline SVG so no extra file needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0e'/%3E%3Ctext x='50' y='72' font-family='serif' font-size='65' font-weight='900' text-anchor='middle' fill='%23f5c14b' font-style='italic'%3E%24%3C/text%3E%3C/svg%3E">
+<!-- JSON-LD Structured Data (SEO + AdSense friendly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pulse Live Salary Calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "A free real-time salary calculator that shows your earnings ticking up second by second based on your monthly salary, daily working hours, and working days per month.",
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+    { "@type": "Offer", "price": "4.99", "priceCurrency": "USD", "name": "Pulse Pro" }
+  ]
+}
+</script>
+
+<!-- ========== AdSense ========== -->
+<!-- Publisher ID: 7102501058294294 (review submitted 2026-05-24) -->
+<meta name="google-adsense-account" content="ca-pub-7102501058294294">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7102501058294294" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=JetBrains+Mono:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&family=Inter+Tight:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  /* ========== THEME TOKENS ========== */
+  :root, .theme-gold {
+    --bg: #0a0a0e;
+    --bg-elev: #14141b;
+    --bg-card: #1a1a23;
+    --accent: #f5c14b;
+    --accent-bright: #ffd770;
+    --accent-deep: #c69a2f;
+    --accent-glow: rgba(245, 193, 75, 0.4);
+    --text: #f5e9c8;
+    --text-dim: #8b8470;
+    --text-soft: #c9bfa4;
+    --border: rgba(245, 193, 75, 0.2);
+    --border-strong: rgba(245, 193, 75, 0.5);
+  }
+  /* Bear Green — K-line falling color (teal-leaning, classic Chinese stock chart green) */
+  .theme-emerald {
+    --bg: #04130f;
+    --bg-elev: #0a1d18;
+    --bg-card: #0e261f;
+    --accent: #14b8a6;
+    --accent-bright: #5eead4;
+    --accent-deep: #0d9488;
+    --accent-glow: rgba(20, 184, 166, 0.45);
+    --text: #ccfbf1;
+    --text-dim: #6b8782;
+    --text-soft: #99d4c8;
+    --border: rgba(20, 184, 166, 0.22);
+    --border-strong: rgba(20, 184, 166, 0.55);
+  }
+  .theme-sapphire {
+    --bg: #060914;
+    --bg-elev: #0d1224;
+    --bg-card: #11172e;
+    --accent: #60a5fa;
+    --accent-bright: #93c5fd;
+    --accent-deep: #2563eb;
+    --accent-glow: rgba(96, 165, 250, 0.4);
+    --text: #dbeafe;
+    --text-dim: #6b7390;
+    --text-soft: #a8b8d8;
+    --border: rgba(96, 165, 250, 0.2);
+    --border-strong: rgba(96, 165, 250, 0.5);
+  }
+  /* Bull Red — K-line rising color (classic Chinese stock chart red) */
+  .theme-crimson {
+    --bg: #100507;
+    --bg-elev: #1c0a0d;
+    --bg-card: #240e12;
+    --accent: #ef4444;
+    --accent-bright: #f87171;
+    --accent-deep: #b91c1c;
+    --accent-glow: rgba(239, 68, 68, 0.45);
+    --text: #fee2e2;
+    --text-dim: #8e6868;
+    --text-soft: #e8a8a8;
+    --border: rgba(239, 68, 68, 0.22);
+    --border-strong: rgba(239, 68, 68, 0.55);
+  }
+  /* Amethyst — replaces Platinum. Deep violet palette. */
+  /* Note: CSS class kept as .theme-platinum for backward compat with saved localStorage */
+  .theme-platinum {
+    --bg: #0b0813;
+    --bg-elev: #170d22;
+    --bg-card: #1d122c;
+    --accent: #a855f7;
+    --accent-bright: #c084fc;
+    --accent-deep: #7e22ce;
+    --accent-glow: rgba(168, 85, 247, 0.45);
+    --text: #f3e8ff;
+    --text-dim: #7b6e8a;
+    --text-soft: #c9b4dd;
+    --border: rgba(168, 85, 247, 0.22);
+    --border-strong: rgba(168, 85, 247, 0.55);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Inter Tight', 'Noto Sans SC', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    transition: background 0.4s ease;
+  }
+  body.lang-zh {
+    font-family: 'Noto Sans SC', 'Inter Tight', system-ui, sans-serif;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(circle at 18% 12%, var(--accent-glow), transparent 50%),
+      radial-gradient(circle at 82% 80%, var(--accent-glow), transparent 55%),
+      radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 70%);
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 0.4s ease;
+  }
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+  .app {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ========== HEADER ========== */
+  .header {
+    padding: 1.5rem 2.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+  }
+  .brand-mark {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.55rem;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+  .brand-mark::before {
+    content: '✦';
+    display: inline-block;
+    margin-right: 0.35rem;
+    transform: scale(0.9);
+    color: var(--accent);
+  }
+  .brand-name {
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+    letter-spacing: 0.06em;
+  }
+  .header-tools {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  /* ===== Globe lang/currency dropdown ===== */
+  .globe {
+    position: relative;
+  }
+  .globe-btn {
+    appearance: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    cursor: pointer;
+    padding: 0.5rem 0.85rem 0.5rem 0.7rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .globe-btn:hover {
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+  .globe-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+  }
+  .globe-btn .chev {
+    font-size: 0.6rem;
+    opacity: 0.5;
+    margin-left: 0.1rem;
+    transition: transform 0.2s;
+  }
+  .globe.open .globe-btn .chev {
+    transform: rotate(180deg);
+  }
+  .globe-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    min-width: 200px;
+    box-shadow: 0 20px 50px -10px rgba(0,0,0,0.6), 0 0 20px -10px var(--accent-glow);
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 50;
+    overflow: hidden;
+  }
+  .globe.open .globe-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .globe-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--text-soft);
+    cursor: pointer;
+    padding: 0.85rem 1rem;
+    font-family: 'Inter Tight', 'Noto Sans SC', sans-serif;
+    font-size: 0.88rem;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .globe-item:hover {
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+  }
+  .globe-item.on {
+    color: var(--accent);
+  }
+  .globe-item .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+  }
+  .globe-item.on .meta { color: var(--accent-deep); }
+
+  /* ===== PRO pill ===== */
+  .pro-pill {
+    appearance: none;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 0.5rem 0.85rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+  }
+  .pro-pill:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: var(--accent);
+  }
+  .pro-pill.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+    animation: none !important;
+  }
+  /* Pulse only for free users */
+  body:not(.is-pro) .pro-pill {
+    animation: proPulse 2.6s ease-in-out infinite;
+  }
+  @keyframes proPulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(245, 193, 75, 0);
+      border-color: var(--border-strong);
+    }
+    50% {
+      box-shadow: 0 0 0 6px rgba(245, 193, 75, 0);
+      border-color: var(--accent);
+    }
+  }
+  .header-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+  }
+
+  /* ========== MAIN / PAGES ========== */
+  .main {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.25rem 2.5rem;
+  }
+  .page {
+    width: 100%;
+    max-width: 900px;
+    display: none;
+    animation: pageIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .page.active { display: block; }
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .page-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-deep);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .page-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border-strong), transparent);
+  }
+  .page-title {
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 5.3vw, 3.6rem);
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 0.55rem;
+  }
+  .page-title .em {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .page-sub {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 2.25rem;
+    max-width: 540px;
+    line-height: 1.65;
+  }
+
+  /* ========== INPUT PAGE ========== */
+  .input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+  .field {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.3rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .field::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-glow), transparent 60%);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .field:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+  }
+  .field-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent-deep);
+    margin-bottom: 0.6rem;
+    display: block;
+    position: relative;
+  }
+  .field-input-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.75rem;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    padding: 0;
+    min-width: 0;
+  }
+  .field input::-webkit-outer-spin-button,
+  .field input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .field input { -moz-appearance: textfield; }
+  .field-unit {
+    font-family: 'Inter Tight', sans-serif;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  .field-hint {
+    margin-top: 0.5rem;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    position: relative;
+  }
+
+  .preview {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    gap: 2.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+  }
+  .preview::before {
+    content: 'LIVE';
+    position: absolute;
+    top: 0.55rem;
+    right: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    opacity: 0.6;
+  }
+  .preview-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .preview-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+  }
+  .preview-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.02rem;
+    color: var(--accent-bright);
+    font-weight: 500;
+  }
+
+  /* ========== PRO PANEL (Pro users only) ========== */
+  .pro-panel {
+    display: none; /* hidden for free users */
+    border: 1px dashed var(--border-strong);
+    border-radius: 4px;
+    padding: 1.4rem;
+    margin-bottom: 1.75rem;
+    background: rgba(255,255,255,0.015);
+    position: relative;
+  }
+  body.is-pro .pro-panel { display: block; }
+  .pro-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .pro-panel-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pro-badge-mini {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.6rem;
+    font-weight: 700;
+    border-radius: 2px;
+    letter-spacing: 0.15em;
+  }
+  .pro-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+  .pro-control {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.85rem 1rem;
+  }
+  .pro-control-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .pro-control input[type=number] {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+  }
+  .pro-control input[type=number].invalid {
+    color: #ff7a7a;
+  }
+  .pro-control-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    margin-top: 0.35rem;
+    line-height: 1.3;
+    opacity: 0.65;
+    transition: color 0.15s, opacity 0.15s;
+  }
+  .pro-control-hint.warn {
+    color: #ff7a7a;
+    opacity: 1;
+  }
+  .theme-swatches {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .swatch.on {
+    border-color: var(--text);
+    transform: scale(1.1);
+  }
+  .swatch.gold { background: #f5c14b; }
+  .swatch.emerald { background: #14b8a6; }
+  .swatch.sapphire { background: #60a5fa; }
+  .swatch.crimson { background: #ef4444; }
+  .swatch.platinum { background: #a855f7; }
+
+  /* ========== BUTTONS ========== */
+  .btn-primary {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.2rem 2.4rem;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 900;
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    box-shadow: 0 10px 40px -10px var(--accent-glow);
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.45), transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+  .btn-primary:hover {
+    background: var(--accent-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 50px -10px var(--accent-glow);
+  }
+  .btn-primary:hover::before { transform: translateX(100%); }
+  .btn-primary .arrow {
+    transition: transform 0.25s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .btn-primary:hover .arrow { transform: translateX(4px); }
+  .btn-ghost {
+    appearance: none;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 1.05rem 1.75rem;
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent);
+  }
+
+  /* ========== FAQ / HOW-IT-WORKS ========== */
+  .info-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .info-block {
+    margin-bottom: 2.5rem;
+  }
+  .info-block-title {
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+  }
+  .info-block-title .num {
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  .step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.1rem 1.3rem;
+  }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .step-title {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin-bottom: 0.35rem;
+  }
+  .step-desc {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 0.55rem;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .faq-item:hover { border-color: var(--border-strong); }
+  .faq-q {
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    user-select: none;
+  }
+  .faq-q::after {
+    content: '+';
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    transition: transform 0.25s;
+  }
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.2rem;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 1.2rem 1rem;
+  }
+
+  /* ========== WORK PAGE ========== */
+  .clock-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.4rem;
+  }
+  .clock-status {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .pulse {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 1.4s ease-out infinite;
+    box-shadow: 0 0 12px var(--accent);
+  }
+  body.is-paused .pulse {
+    animation: none;
+    background: var(--text-dim);
+    box-shadow: none;
+  }
+  body.is-paused .clock-status {
+    color: var(--text-dim);
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+  }
+  .work-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-variant-numeric: tabular-nums;
+  }
+  .work-time .ms {
+    color: var(--text-dim);
+    font-size: 0.82em;
+  }
+  .start-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-align: right;
+    letter-spacing: 0.05em;
+  }
+
+  /* ========== MONEY DISPLAY — FIXED JITTER ========== */
+  .money-stage {
+    background:
+      radial-gradient(ellipse at center top, var(--accent-glow), transparent 60%),
+      var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3.25rem 1.75rem 2.25rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .money-stage::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 60px,
+      var(--accent-glow) 60px,
+      var(--accent-glow) 61px
+    );
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  .money-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent-deep);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+
+  /* Restored organic layout: inline-flex, decimal point as ::before pseudo, integer width grows naturally */
+  .money-display {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--accent-bright);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    text-shadow: 0 0 60px var(--accent-glow);
+  }
+  .money-currency {
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    font-family: 'Fraunces', serif;
+    font-style: normal; /* per spec: no italic on $ */
+    color: var(--accent);
+    margin-right: 0.4rem;
+  }
+  .money-whole {
+    font-size: clamp(4.3rem, 12.5vw, 8.2rem);
+    font-variant-numeric: tabular-nums;
+  }
+  .money-decimal {
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .money-decimal::before { content: '.'; }
+  .money-ms {
+    font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+    color: var(--accent-deep);
+    font-variant-numeric: tabular-nums;
+    margin-left: 0.15rem;
+    align-self: baseline;
+    opacity: 0.65;
+  }
+  .takehome-line {
+    margin-top: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    position: relative;
+    display: none;
+  }
+  body.is-pro.tax-on .takehome-line { display: block; }
+  .takehome-line .val {
+    color: var(--accent-bright);
+    font-weight: 500;
+    margin-left: 0.4rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.6rem;
+    padding-top: 1.6rem;
+    border-top: 1px dashed var(--border);
+    position: relative;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.32rem;
+    text-align: left;
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+  }
+  .stat-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.98rem;
+    color: var(--text);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .milestone {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.1rem 1.4rem;
+    margin-top: 1.1rem;
+  }
+  .milestone-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.65rem;
+  }
+  .milestone-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent-deep);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .milestone-target {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .progress-bar {
+    height: 4px;
+    background: var(--bg);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-deep), var(--accent-bright));
+    transition: width 0.2s ease-out;
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
+  /* "Next rain" hint below milestone progress bar */
+  .rain-reminder {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.7rem;
+  }
+  .rain-rem-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .rain-rem-target {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--accent-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .rain-reminder.is-done .rain-rem-target {
+    color: var(--text-dim);
+  }
+
+  /* Daily goal (Pro) */
+  .goal-card {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.1rem 1.4rem;
+    margin-top: 0.9rem;
+  }
+  body.is-pro.goal-on .goal-card { display: block; }
+  .goal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.65rem;
+  }
+  .goal-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent-deep);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .goal-progress-text {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .goal-progress-text .reached {
+    color: var(--accent-bright);
+    font-weight: 500;
+  }
+
+  .actions-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+    margin-top: 1.6rem;
+    flex-wrap: wrap;
+  }
+  .pause-btn {
+    appearance: none;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    padding: 1.05rem 1.6rem;
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .pause-btn:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: var(--accent);
+  }
+  .pause-btn .lock {
+    display: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    background: var(--bg-card);
+    border-radius: 2px;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+  }
+  body:not(.is-pro) .pause-btn .lock { display: inline-block; }
+
+  /* ========== RESULT PAGE ========== */
+  .result-hero {
+    text-align: center;
+    padding: 0.5rem 0 2.5rem;
+  }
+  .result-greeting {
+    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .result-money {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3.6rem, 10.5vw, 7.2rem);
+    color: var(--accent-bright);
+    line-height: 1;
+    margin: 1rem 0 1.3rem;
+    text-shadow: 0 0 80px var(--accent-glow);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+  }
+  .result-money .currency {
+    font-style: normal; /* per spec: no italic on $ */
+    font-size: 0.55em;
+    color: var(--accent);
+    margin-right: 0.15em;
+  }
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+    margin-bottom: 2.25rem;
+  }
+  .result-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px; height: 100%;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+  .result-card-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent-deep);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.65rem;
+  }
+  .result-card-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.65rem;
+    color: var(--text);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .result-card-sub {
+    margin-top: 0.4rem;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .result-actions {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ========== ADSENSE SLOT ========== */
+  .ad-slot {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2.5rem 0.5rem;
+    position: relative;
+  }
+  body.is-pro .ad-slot { display: none; }
+  .ad-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--text-dim);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+  }
+  .ad-placeholder {
+    background: var(--bg-card);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* ========== TOAST + COIN ========== */
+  .toast-stage {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    overflow: hidden;
+  }
+  .toast {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+    color: var(--bg);
+    padding: 0.9rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 20px 50px -10px var(--accent-glow);
+    opacity: 0;
+    transition: all 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    white-space: nowrap;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .coin {
+    position: absolute;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: var(--accent);
+    opacity: 0;
+    pointer-events: none;
+    text-shadow: 0 0 20px var(--accent-glow);
+    animation: floatUp 2.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  @keyframes floatUp {
+    0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.5); }
+    18% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-320px) rotate(180deg) scale(1.2); }
+  }
+
+  /* ========== MONEY RAIN ========== */
+  .rain-stage {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99;
+    overflow: hidden;
+  }
+  .rain-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .rain-vignette.show { opacity: 1; }
+
+  /* ===== Catch interaction (V2 — clickable bills) ===== */
+  /* During rain: lock all non-rain UI from being misclicked + global pointer cursor.
+     Only the bills themselves stay interactive. */
+  body.rain-active,
+  body.rain-active * {
+    cursor: pointer !important;
+  }
+  body.rain-active .header,
+  body.rain-active .main,
+  body.rain-active .footer,
+  body.rain-active .modal-overlay {
+    pointer-events: none !important;
+  }
+
+  .bill.catchable {
+    pointer-events: auto;
+    cursor: pointer;
+    transition: filter 0.1s, transform 0.1s;
+  }
+  /* Invisible expanded click area — does NOT change visible bill size */
+  .bill.catchable::before {
+    content: '';
+    position: absolute;
+    inset: -32px;
+    /* fully transparent click pad — 124×92 area for a base 60×28 bill */
+  }
+  .bill.catchable:hover {
+    filter: brightness(1.25);
+  }
+  .bill.caught {
+    animation: billCaught 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) forwards !important;
+    pointer-events: none;
+  }
+  @keyframes billCaught {
+    0%   { transform: scale(1) rotate(var(--rNow, 0deg)); opacity: 1; }
+    40%  { transform: scale(1.6) rotate(var(--rNow, 0deg)); opacity: 1; }
+    100% { transform: scale(0.2) rotate(var(--rNow, 0deg)); opacity: 0; }
+  }
+  .bill-pop {
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: var(--accent-bright);
+    text-shadow: 0 0 18px var(--accent-glow), 0 2px 6px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 3;
+    animation: billPop 1s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+  }
+  @keyframes billPop {
+    0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+    15%  { opacity: 1; transform: translate(-50%, -80%) scale(1.15); }
+    100% { opacity: 0; transform: translate(-50%, -180%) scale(1); }
+  }
+  /* /Catch interaction ===== */
+
+  /* Slam entry: replaces the gentler .show transition for headline reveal */
+  .big-toast.slam {
+    animation: bigToastSlam 0.7s cubic-bezier(0.18, 1.6, 0.5, 1) forwards;
+  }
+  @keyframes bigToastSlam {
+    0%   { transform: translate(-50%, -50%) scale(3.2); opacity: 0; }
+    40%  { transform: translate(-50%, -50%) scale(0.92); opacity: 1; }
+    60%  { transform: translate(-50%, -50%) scale(1.06); }
+    80%  { transform: translate(-50%, -50%) scale(0.98); }
+    100% { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+  }
+
+  /* Sustained heartbeat after slam ends — gentle "alive" pulse during the rain */
+  .big-toast.heartbeat {
+    animation: bigToastHeartbeat 2.4s ease-in-out infinite;
+  }
+  @keyframes bigToastHeartbeat {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%      { transform: translate(-50%, -50%) scale(1.04); }
+  }
+
+  .big-toast {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: linear-gradient(135deg, var(--accent-bright), var(--accent));
+    color: var(--bg);
+    padding: 1.4rem 2.4rem;
+    border-radius: 6px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    box-shadow: 0 30px 80px -10px var(--accent-glow);
+    opacity: 0;
+    transition: all 0.55s cubic-bezier(0.2, 1.4, 0.4, 1);
+    text-align: center;
+    letter-spacing: -0.01em;
+    z-index: 2;
+  }
+  .big-toast.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .big-toast .label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 0.25rem;
+  }
+  .bill {
+    position: absolute;
+    width: 70px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+    border: 1px solid var(--accent-bright);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: rgba(0,0,0,0.65);
+    font-size: 1.3rem;
+    box-shadow: 0 4px 18px var(--accent-glow);
+    pointer-events: none;
+    opacity: 0;
+  }
+  @keyframes fallDown {
+    0% { transform: translateY(-50px) rotate(var(--r0)); opacity: 0; }
+    8% { opacity: 1; }
+    92% { opacity: 1; }
+    100% { transform: translateY(110vh) rotate(var(--r1)); opacity: 0; }
+  }
+
+  /* ========== MODAL (Pro + content modals) ========== */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .modal-overlay.show {
+    display: flex;
+    opacity: 1;
+  }
+  .modal {
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    max-width: 620px;
+    width: 100%;
+    padding: 2.25rem 2.25rem 2rem;
+    position: relative;
+    box-shadow: 0 30px 100px -10px rgba(0,0,0,0.7), 0 0 60px -20px var(--accent-glow);
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .modal-overlay.show .modal { transform: scale(1); }
+  .modal-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--text); }
+  .modal-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .modal-title {
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    font-weight: 900;
+    font-size: 1.9rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    line-height: 1.15;
+  }
+  .modal-title .em {
+    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .modal-sub {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+  }
+  .modal-body h3 {
+    font-family: 'Noto Serif SC', 'Inter Tight', serif;
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.55rem;
+  }
+  .modal-body h3:first-of-type { margin-top: 0.5rem; }
+  .modal-body p, .modal-body li {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+  }
+  .modal-body ul, .modal-body ol { padding-left: 1.5rem; }
+  .modal-body li { margin-bottom: 0.4rem; }
+  .modal-body a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .modal-body a:hover { color: var(--accent-bright); }
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+  .price-stack {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .price-original {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--text-dim);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    opacity: 0.7;
+  }
+  .price-amount {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: var(--accent-bright);
+    line-height: 1;
+  }
+  .price-unit {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .price-launch {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.4rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+  .price-launch-tag {
+    color: var(--accent-bright);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .price-launch-countdown {
+    color: var(--text-dim);
+  }
+  /* ===== Free vs Pro comparison table ===== */
+  .compare-wrap {
+    margin-bottom: 1.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .compare-table thead th {
+    background: rgba(0,0,0,0.25);
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.75rem 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-table thead th.compare-free-col,
+  .compare-table thead th.compare-pro-col {
+    text-align: center;
+    width: 70px;
+  }
+  .compare-table thead th.compare-pro-col {
+    color: var(--accent-bright);
+    background: rgba(0,0,0,0.4);
+  }
+  .compare-table tbody tr {
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  .compare-table tbody tr:hover {
+    background: rgba(255,255,255,0.02);
+  }
+  .compare-table td {
+    padding: 0.7rem 0.85rem;
+    color: var(--text);
+  }
+  .compare-table td.cmp-feat {
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: var(--text-soft);
+  }
+  .compare-table td.cmp-yes,
+  .compare-table td.cmp-no,
+  .compare-table td.cmp-val {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    width: 70px;
+    white-space: nowrap;
+  }
+  .compare-table td.cmp-yes { color: var(--text-dim); font-weight: 700; }
+  .compare-table td.cmp-no  { color: var(--text-dim); opacity: 0.45; }
+  .compare-table td.cmp-val { color: var(--text-dim); font-size: 0.78rem; }
+  .compare-table td.pro-cell {
+    background: rgba(0,0,0,0.25);
+    color: var(--accent-bright);
+  }
+  .compare-table td.cmp-yes.pro-cell {
+    color: var(--accent-bright);
+    text-shadow: 0 0 12px var(--accent-glow);
+  }
+  .compare-table td.cmp-val.pro-cell {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+
+  /* Legacy ✓ feature list (no longer used, kept in case modal layouts reference it) */
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.6rem;
+  }
+  .feature {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.85rem;
+    align-items: start;
+  }
+  .feature-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.85rem;
+    margin-top: 1px;
+  }
+  .feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .feature-title {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  .feature-desc {
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .modal-actions .btn-primary {
+    flex: 1;
+    justify-content: center;
+    padding: 1.1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .modal-actions .btn-secondary {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+  .modal-actions .btn-secondary:hover { color: var(--text); }
+
+  /* ========== COOKIE BANNER ========== */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-elev);
+    border-top: 1px solid var(--border-strong);
+    padding: 1.1rem 2.5rem;
+    z-index: 150;
+    transform: translateY(110%);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 -10px 40px -10px rgba(0,0,0,0.4);
+  }
+  .cookie-banner.show { transform: translateY(0); }
+  .cookie-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cookie-text {
+    color: var(--text-soft);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    flex: 1;
+    min-width: 280px;
+  }
+  .cookie-text a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .cookie-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .cookie-btn {
+    appearance: none;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--text-soft);
+    cursor: pointer;
+    padding: 0.7rem 1.2rem;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .cookie-btn:hover { color: var(--text); border-color: var(--accent); }
+  .cookie-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+    font-weight: 700;
+  }
+  .cookie-btn.primary:hover {
+    background: var(--accent-bright);
+    border-color: var(--accent-bright);
+    color: var(--bg);
+  }
+
+  /* ========== FOOTER ========== */
+  .footer {
+    padding: 1.4rem 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    box-shadow: 0 0 8px var(--accent);
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ========== REDUCED MOTION ========== */
+  @media (prefers-reduced-motion: reduce) {
+    .pulse, .pro-pill, .coin, .bill, .btn-primary::before {
+      animation: none !important;
+    }
+    .page, .modal-overlay, .modal { transition: none !important; animation: none !important; }
+  }
+
+  @media (max-width: 760px) {
+    .header, .main, .footer, .ad-slot, .cookie-banner { padding-left: 1.15rem; padding-right: 1.15rem; }
+    .header { padding-top: 1.15rem; padding-bottom: 0.85rem; }
+    .main { padding-top: 1.4rem; padding-bottom: 1.4rem; }
+    .input-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .clock-bar { grid-template-columns: 1fr; gap: 0.65rem; text-align: center; }
+    .start-time { text-align: center; }
+    .header-meta { display: none; }
+    .preview { gap: 1.25rem; padding: 0.95rem 1.1rem; }
+    .pro-controls-grid { grid-template-columns: 1fr; }
+    .modal { padding: 1.75rem 1.5rem 1.5rem; }
+    .modal-title { font-size: 1.55rem; }
+    .big-toast { font-size: 1.6rem; padding: 1.1rem 1.6rem; }
+    .footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPV3Q2JY9R"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VPV3Q2JY9R');
+</script>
+
+<!-- SEO: strip stale/unwanted URL params that don't drive any app behavior.
+     This prevents Google from indexing ?lang=zh, ?ref=, ?utm_*, etc. as
+     separate "alternate" pages even though canonical already covers them. -->
+<script>
+(function () {
+  try {
+    var url = new URL(window.location.href);
+    var paramsToStrip = ['lang', 'ref', 'fbclid', 'gclid', 'msclkid',
+                         'utm_source', 'utm_medium', 'utm_campaign',
+                         'utm_term', 'utm_content'];
+    var changed = false;
+    paramsToStrip.forEach(function (k) {
+      if (url.searchParams.has(k)) { url.searchParams.delete(k); changed = true; }
+    });
+    if (changed) {
+      var clean = url.pathname + (url.search || '') + url.hash;
+      window.history.replaceState({}, '', clean);
+    }
+  } catch (e) { /* fail silent — must never block page load */ }
+})();
+</script>
+</head>
+<body class="theme-gold lang-en">
+<div class="app">
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand-mark">Pulse</div>
+      <div class="brand-name" id="brand-name">Live Salary Calculator</div>
+    </div>
+    <div class="header-tools">
+      <!-- Globe lang+currency dropdown -->
+      <div class="globe" id="globe">
+        <button class="globe-btn" id="globe-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>
+          <span id="globe-label">EN</span>
+          <span class="chev">▾</span>
+        </button>
+        <div class="globe-menu" role="menu">
+          <button class="globe-item on" data-lang="en" data-cur="USD" role="menuitem">
+            <span>English</span>
+            <span class="meta">USD · $</span>
+          </button>
+          <button class="globe-item" data-lang="zh" data-cur="CNY" role="menuitem">
+            <span>中文</span>
+            <span class="meta">CNY · ¥</span>
+          </button>
+        </div>
+      </div>
+      <button class="pro-pill" id="pro-btn">
+        <span>✦</span><span data-i18n="pro.button">PRO</span>
+      </button>
+      <span class="header-meta" id="dateTime">—</span>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- INPUT PAGE -->
+    <section class="page active" id="page-input">
+      <div class="page-label" data-i18n="page1.label">01 / Setup · Input</div>
+      <h1 class="page-title" id="page1-title"></h1>
+      <p class="page-sub" data-i18n="page1.sub"></p>
+
+      <div class="input-grid">
+        <div class="field">
+          <label class="field-label" data-i18n="field.salary"></label>
+          <div class="field-input-row">
+            <input type="number" id="in-salary" value="5000" min="0" step="100">
+            <span class="field-unit" id="unit-salary"></span>
+          </div>
+          <div class="field-hint" data-i18n="field.salary.hint"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" data-i18n="field.hours"></label>
+          <div class="field-input-row">
+            <input type="number" id="in-hours" value="8" min="0.5" max="24" step="0.5">
+            <span class="field-unit" data-i18n="unit.hours"></span>
+          </div>
+          <div class="field-hint" data-i18n="field.hours.hint"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" data-i18n="field.days"></label>
+          <div class="field-input-row">
+            <input type="number" id="in-days" value="22" min="1" max="31" step="1">
+            <span class="field-unit" data-i18n="unit.days"></span>
+          </div>
+          <div class="field-hint" data-i18n="field.days.hint"></div>
+        </div>
+      </div>
+
+      <div class="preview">
+        <div class="preview-item">
+          <span class="preview-label" data-i18n="preview.hour"></span>
+          <span class="preview-value" id="prev-hour">$28.41</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-label" data-i18n="preview.min"></span>
+          <span class="preview-value" id="prev-min">$0.47</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-label" data-i18n="preview.sec"></span>
+          <span class="preview-value" id="prev-sec">$0.0079</span>
+        </div>
+        <div class="preview-item">
+          <span class="preview-label" data-i18n="preview.milestone"></span>
+          <span class="preview-value" id="prev-ms">$2.37</span>
+        </div>
+      </div>
+
+      <!-- PRO panel (hidden for free users via CSS) -->
+      <div class="pro-panel">
+        <div class="pro-panel-header">
+          <div class="pro-panel-title">
+            <span class="pro-badge-mini">PRO</span>
+            <span data-i18n="pro.panel.title">Advanced Controls</span>
+          </div>
+        </div>
+        <div class="pro-controls-grid">
+          <div class="pro-control">
+            <label class="pro-control-label" data-i18n="pro.ctrl.theme">Theme</label>
+            <div class="theme-swatches" id="theme-swatches">
+              <div class="swatch gold on" data-theme="theme-gold" title="Gold"></div>
+              <div class="swatch emerald" data-theme="theme-emerald" title="Emerald"></div>
+              <div class="swatch sapphire" data-theme="theme-sapphire" title="Sapphire"></div>
+              <div class="swatch crimson" data-theme="theme-crimson" title="Crimson"></div>
+              <div class="swatch platinum" data-theme="theme-platinum" title="Amethyst"></div>
+            </div>
+          </div>
+          <div class="pro-control">
+            <label class="pro-control-label" data-i18n="pro.ctrl.tax">Tax rate (%)</label>
+            <input type="number" id="in-tax" value="0" min="0" max="60" step="0.5">
+          </div>
+          <div class="pro-control">
+            <label class="pro-control-label" data-i18n="pro.ctrl.goal">Daily goal</label>
+            <input type="number" id="in-goal" value="0" min="0" step="10">
+          </div>
+          <div class="pro-control">
+            <label class="pro-control-label" data-i18n="pro.ctrl.milestone">Custom milestone (0 = auto)</label>
+            <input type="number" id="in-milestone" value="0" min="0" step="0.01">
+            <div class="pro-control-hint" id="in-milestone-hint" data-i18n="pro.ctrl.milestone.hint">Minimum $0.50 (or 0 for auto)</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btn-clock-in">
+        <span data-i18n="btn.clockin">Clock In · Start</span>
+        <span class="arrow">→</span>
+      </button>
+
+      <!-- HOW IT WORKS + FAQ (for AdSense content depth + SEO) -->
+      <section class="info-section">
+        <div class="info-block">
+          <h2 class="info-block-title">
+            <span class="num">01</span>
+            <span data-i18n="info.how.title">How it works</span>
+          </h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-title" data-i18n="info.step1.t">Enter your salary</div>
+              <div class="step-desc" data-i18n="info.step1.d">Type your monthly take-home pay along with how many hours you work per day and how many days per month. Pulse uses these three numbers to calculate exactly how much you earn every second.</div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-title" data-i18n="info.step2.t">Clock in</div>
+              <div class="step-desc" data-i18n="info.step2.d">When you start your work day, hit Clock In. A precise live ticker begins counting up — down to the millisecond — showing exactly how much money you've earned so far this session.</div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-title" data-i18n="info.step3.t">Celebrate milestones</div>
+              <div class="step-desc" data-i18n="info.step3.d">Every few minutes you'll hit a milestone — a small celebration appears to mark the moment. After larger amounts, you get a full-screen money rain. Earning money should feel rewarding.</div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-title" data-i18n="info.step4.t">Clock out and review</div>
+              <div class="step-desc" data-i18n="info.step4.d">When your day ends, clock out to see your total earnings, total time worked, milestones hit, and your effective hourly rate for this session.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <h2 class="info-block-title">
+            <span class="num">02</span>
+            <span data-i18n="info.faq.title">Frequently asked questions</span>
+          </h2>
+          <div id="faq-list">
+            <!-- populated by JS for i18n -->
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- WORK PAGE -->
+    <section class="page" id="page-work">
+      <div class="page-label" data-i18n="page2.label">02 / Working</div>
+
+      <div class="clock-bar">
+        <div class="clock-status">
+          <span class="pulse"></span>
+          <span data-i18n="page2.status" id="clock-status-text">Earning now</span>
+        </div>
+        <div class="work-time" id="work-time">
+          00:00:00<span class="ms">.000</span>
+        </div>
+        <div class="start-time" id="start-time">START · —</div>
+      </div>
+
+      <div class="money-stage">
+        <div class="money-label" data-i18n="page2.earned">Earned</div>
+
+        <!-- Restored: organic jitter, currency + integer + decimal + ms in inline-flex -->
+        <div class="money-display">
+          <span class="money-currency" id="m-cur">$</span>
+          <span class="money-whole" id="m-whole">0</span>
+          <span class="money-decimal" id="m-dec">00</span>
+          <span class="money-ms" id="m-ms">000</span>
+        </div>
+
+        <div class="takehome-line">
+          <span data-i18n="takehome">After tax:</span><span class="val" id="m-takehome">—</span>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-label" data-i18n="page2.permin"></span>
+            <span class="stat-value" id="rate-min">$0.47</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label" data-i18n="page2.persec"></span>
+            <span class="stat-value" id="rate-sec">$0.0079</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label" data-i18n="page2.milestones"></span>
+            <span class="stat-value" id="milestone-count">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="milestone">
+        <div class="milestone-head">
+          <span class="milestone-label" data-i18n="page2.next"></span>
+          <span class="milestone-target" id="ms-target">$2.37</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="ms-progress" style="width: 0%"></div>
+        </div>
+        <div class="rain-reminder" id="rain-reminder">
+          <span class="rain-rem-label" data-i18n="page2.nextRain">Next rain</span>
+          <span class="rain-rem-target" id="rain-rem-target">—</span>
+        </div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-head">
+          <span class="goal-label" data-i18n="goal.label">Today's goal</span>
+          <span class="goal-progress-text">
+            <span class="reached" id="goal-reached">$0.00</span>
+            <span> / </span>
+            <span id="goal-total">$0.00</span>
+            <span id="goal-pct" style="margin-left:0.5rem; color: var(--text-dim)">0%</span>
+          </span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="goal-progress" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="actions-row">
+        <button class="pause-btn" id="btn-pause">
+          <span id="pause-label" data-i18n="btn.pause">Pause</span>
+          <span class="lock">PRO</span>
+        </button>
+        <button class="btn-primary" id="btn-clock-out">
+          <span data-i18n="btn.clockout">Clock Out</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- RESULT PAGE -->
+    <section class="page" id="page-result">
+      <div class="page-label" data-i18n="page3.label">03 / Result</div>
+
+      <div class="result-hero">
+        <div class="result-greeting" data-i18n="page3.greeting"></div>
+        <div class="result-money">
+          <span class="currency" id="r-cur">$</span><span id="r-money">0.00</span>
+        </div>
+        <p class="page-sub" style="margin: 0 auto;" data-i18n="page3.sub"></p>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-card">
+          <div class="result-card-label" data-i18n="card.totaltime"></div>
+          <div class="result-card-value" id="r-time">00:00:00</div>
+          <div class="result-card-sub" id="r-time-sub">—</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label" data-i18n="card.milestones"></div>
+          <div class="result-card-value" id="r-milestones">0</div>
+          <div class="result-card-sub" id="r-milestones-sub">—</div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label" data-i18n="card.hourly"></div>
+          <div class="result-card-value" id="r-hourly">$0.00</div>
+          <div class="result-card-sub" data-i18n="card.hourly.sub"></div>
+        </div>
+        <div class="result-card">
+          <div class="result-card-label" data-i18n="card.progress"></div>
+          <div class="result-card-value" id="r-day-pct">0%</div>
+          <div class="result-card-sub" id="r-day-sub">—</div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-ghost" id="btn-reset" data-i18n="btn.reset"></button>
+        <button class="btn-primary" id="btn-continue">
+          <span data-i18n="btn.continue">Keep Going</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== AdSense slot ===== -->
+  <!--
+    Ad slot is disabled until AdSense is fully approved.
+    To re-enable later:
+      1) Create an ad unit in AdSense → get the data-ad-slot ID
+      2) Uncomment this entire block
+      3) Replace data-ad-slot="XXXXXXXXXX" with the real ID
+
+  <div class="ad-slot" id="adSlot">
+    <div class="ad-label" data-i18n="ad.label">Advertisement</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7102501058294294"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+
+  <footer class="footer">
+    <span><span class="dot"></span><span data-i18n="footer.tagline">EST. 2026 · TIME IS MONEY</span></span>
+    <span class="footer-links">
+      <a href="/blog/" data-i18n="footer.blog">Blog</a>
+      <a href="/about.html" data-i18n="footer.about">About</a>
+      <a href="/privacy.html" data-i18n="footer.privacy">Privacy</a>
+      <a href="/terms.html" data-i18n="footer.terms">Terms</a>
+      <a href="/contact.html" data-i18n="footer.contact">Contact</a>
+      <a href="mailto:support@arknove.com">support@arknove.com</a>
+      <span id="status">READY</span>
+    </span>
+  </footer>
+</div>
+
+<!-- ===== Toast / coin layer ===== -->
+<div class="toast-stage" id="toastStage">
+  <div class="toast" id="toast">
+    <span>✦</span>
+    <span id="toast-text"></span>
+  </div>
+</div>
+
+<!-- ===== Money rain layer ===== -->
+<div class="rain-stage" id="rainStage">
+  <div class="rain-vignette" id="rainVignette"></div>
+  <div class="big-toast" id="bigToast">
+    <span class="label" data-i18n="bigtoast.label">Major Milestone</span>
+    <span id="bigToastAmount">$100</span>
+  </div>
+</div>
+
+<!-- ===== Cookie banner ===== -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <div class="cookie-text" data-i18n="cookie.text">
+      We use cookies to improve your experience and to serve personalized ads via Google AdSense. See our <a data-modal="privacy">Privacy Policy</a> for details.
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn" id="cookie-essential" data-i18n="cookie.essential">Essential only</button>
+      <button class="cookie-btn primary" id="cookie-accept" data-i18n="cookie.accept">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Pro modal ===== -->
+<div class="modal-overlay" id="proModal">
+  <div class="modal">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-label" data-i18n="pro.modal.label">Pulse Pro</div>
+    <h2 class="modal-title" id="modal-title"></h2>
+    <p class="modal-sub" data-i18n="pro.modal.sub"></p>
+    <div class="price-row">
+      <div class="price-stack">
+        <span class="price-original js-launch-only">$9.99</span>
+        <span class="price-amount js-price-current">$2.99</span>
+      </div>
+      <span class="price-unit" data-i18n="pro.modal.priceUnit">one-time · lifetime</span>
+    </div>
+    <div class="price-launch js-launch-only" id="price-launch-banner">
+      <span class="price-launch-tag">🔥 Founders Pricing</span>
+      <span class="price-launch-countdown" id="price-launch-countdown"></span>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="compare-feature-col" data-i18n="cmp.head.feature">Feature</th>
+            <th class="compare-free-col" data-i18n="cmp.head.free">Free</th>
+            <th class="compare-pro-col" data-i18n="cmp.head.pro">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cmp-feat" data-i18n="cmp.r1">Live earnings ticker</td><td class="cmp-yes">✓</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r2">Daily report on clock-out</td><td class="cmp-yes">✓</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r3">English / 中文</td><td class="cmp-yes">✓</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r4">Visual themes</td><td class="cmp-val" data-i18n="cmp.r4.free">Gold only</td><td class="cmp-val pro-cell" data-i18n="cmp.r4.pro">5 themes</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r5">Tax mode (after-tax view)</td><td class="cmp-no">—</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r6">Daily goal tracker</td><td class="cmp-no">—</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r7">Pause &amp; resume</td><td class="cmp-no">—</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r8">Custom milestones</td><td class="cmp-no">—</td><td class="cmp-yes pro-cell">✓</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r10">Money rain celebration</td><td class="cmp-val" data-i18n="cmp.r10.free">2× / day</td><td class="cmp-val pro-cell" data-i18n="cmp.r10.pro">Unlimited</td></tr>
+          <tr><td class="cmp-feat" data-i18n="cmp.r9">Advertising</td><td class="cmp-val" data-i18n="cmp.r9.free">Shown</td><td class="cmp-val pro-cell" data-i18n="cmp.r9.pro">Removed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-primary" id="btn-upgrade">
+        <span data-i18n="pro.cta">Upgrade · $2.99</span>
+        <span class="arrow">→</span>
+      </button>
+      <button class="btn-secondary" data-close data-i18n="pro.maybeLater">Maybe later</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Content modals (Privacy / Terms / About / Contact) ===== -->
+<div class="modal-overlay" id="privacyModal">
+  <div class="modal">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-label" data-i18n="privacy.label">Legal</div>
+    <h2 class="modal-title" data-i18n="privacy.title">Privacy Policy</h2>
+    <div class="modal-body" id="privacy-body"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="termsModal">
+  <div class="modal">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-label" data-i18n="terms.label">Legal</div>
+    <h2 class="modal-title" data-i18n="terms.title">Terms of Service</h2>
+    <div class="modal-body" id="terms-body"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="aboutModal">
+  <div class="modal">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-label" data-i18n="about.label">About</div>
+    <h2 class="modal-title" data-i18n="about.title">About Pulse</h2>
+    <div class="modal-body" id="about-body"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="contactModal">
+  <div class="modal">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-label" data-i18n="contact.label">Contact</div>
+    <h2 class="modal-title" data-i18n="contact.title">Contact us</h2>
+    <div class="modal-body" id="contact-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /* =============== i18n =============== */
+  const i18n = {
+    en: {
+      'brand.name': 'Live Salary Calculator',
+      'page1.label': '01 / Setup · Input',
+      'page1.title1': 'Tell me your',
+      'page1.title2': 'earning rhythm',
+      'page1.sub': "Enter your salary, then start the clock — watch every second, every millisecond turn into income.",
+      'field.salary': 'Monthly · Salary',
+      'field.hours': 'Hours per day',
+      'field.days': 'Days per month',
+      'field.salary.hint': 'After-tax monthly income',
+      'field.hours.hint': 'Time actually on the clock',
+      'field.days.hint': 'Working days per month',
+      'unit.salary': '/ mo',
+      'unit.hours': 'hrs / day',
+      'unit.days': 'days / mo',
+      'preview.hour': 'Per hour',
+      'preview.min': 'Per minute',
+      'preview.sec': 'Per second',
+      'preview.milestone': 'Next milestone',
+      'btn.clockin': 'Clock In · Start',
+      'pro.button': 'PRO',
+      'pro.panel.title': 'Advanced controls',
+      'pro.ctrl.theme': 'Theme',
+      'pro.ctrl.tax': 'Tax rate (%)',
+      'pro.ctrl.goal': 'Daily goal',
+      'pro.ctrl.milestone': 'Custom milestone (0 = auto)',
+      'pro.ctrl.milestone.hint': 'Minimum $0.50 (or 0 for auto)',
+      'page2.label': '02 / Working',
+      'page2.status': 'Earning now',
+      'page2.statusPaused': 'Paused',
+      'page2.earned': 'Earned',
+      'page2.permin': 'Per minute',
+      'page2.persec': 'Per second',
+      'page2.milestones': 'Milestones',
+      'page2.next': 'Next milestone',
+      'page2.nextRain': 'Next rain',
+      'page2.nextRain.done': "Today's quota used",
+      'takehome': 'After tax:',
+      'goal.label': "Today's goal",
+      'btn.pause': 'Pause',
+      'btn.resume': 'Resume',
+      'btn.clockout': 'Clock Out',
+      'page3.label': '03 / Result',
+      'page3.greeting': 'Great work today ✦',
+      'page3.sub': 'This is the real money you traded your time for.',
+      'card.totaltime': 'Total time',
+      'card.milestones': 'Milestones',
+      'card.hourly': 'Effective hourly',
+      'card.hourly.sub': 'Based on this session',
+      'card.progress': 'Progress',
+      'btn.reset': 'Reset',
+      'btn.continue': 'Keep Going',
+      'pro.modal.label': 'Pulse Pro',
+      'pro.modal.title1': 'Unlock',
+      'pro.modal.title2': 'everything',
+      'pro.modal.sub': "Everything below, forever, for less than a coffee. One-time payment.",
+      'pro.modal.priceUnit': 'one-time · lifetime',
+      'pro.f1.t': 'No ads, ever',
+      'pro.f1.d': 'Pure focus. Just you and the ticker.',
+      'pro.f2.t': '5 themes',
+      'pro.f2.d': 'Gold, Emerald, Sapphire, Crimson, Amethyst.',
+      'pro.f3.t': 'Tax mode',
+      'pro.f3.d': 'Set your bracket, see real take-home in real time.',
+      'pro.f4.t': 'Daily goal',
+      'pro.f4.d': 'Set a target, watch a progress bar fill up.',
+      'pro.f5.t': 'Pause & resume',
+      'pro.f5.d': 'Lunch, restroom, life. The clock waits for you.',
+      'pro.f6.t': 'Custom milestones',
+      'pro.f6.d': 'Celebrate at the exact amounts that matter to you.',
+      // Comparison table
+      'cmp.head.feature': 'Feature',
+      'cmp.head.free':    'Free',
+      'cmp.head.pro':     'Pro',
+      'cmp.r1':           'Live earnings ticker',
+      'cmp.r2':           'Daily report on clock-out',
+      'cmp.r3':           'English / 中文',
+      'cmp.r4':           'Visual themes',
+      'cmp.r4.free':      'Gold only',
+      'cmp.r4.pro':       '5 themes',
+      'cmp.r5':           'Tax mode (after-tax view)',
+      'cmp.r6':           'Daily goal tracker',
+      'cmp.r7':           'Pause & resume',
+      'cmp.r8':           'Custom milestones',
+      'cmp.r9':           'Advertising',
+      'cmp.r9.free':      'Shown',
+      'cmp.r9.pro':       'Removed',
+      'cmp.r10':          'Money rain celebration',
+      'cmp.r10.free':     '2× / day',
+      'cmp.r10.pro':      'Unlimited',
+      'pro.cta': 'Upgrade · {PRICE}',
+      'pro.maybeLater': 'Maybe later',
+      'pro.activated': 'Pro ✓',
+      'pro.launch.tag': '🔥 Founders Pricing',
+      'toast.milestone': 'Milestone',
+      'bigtoast.label': 'Money Rain',
+      'footer.tagline': 'EST. 2026 · TIME IS MONEY',
+      'footer.privacy': 'Privacy',
+      'footer.terms': 'Terms',
+      'footer.about': 'About',
+      'footer.blog': 'Blog',
+      'footer.contact': 'Contact',
+      'footer.status.ready': 'READY',
+      'footer.status.working': 'WORKING',
+      'footer.status.paused': 'PAUSED',
+      'footer.status.done': 'CLOCKED OUT',
+      'ad.label': 'Advertisement',
+      'ad.placeholder': '',
+      'weekdays': ['SUN','MON','TUE','WED','THU','FRI','SAT'],
+
+      // Info / FAQ
+      'info.how.title': 'How it works',
+      'info.faq.title': 'Frequently asked questions',
+      'info.step1.t': 'Enter your salary',
+      'info.step1.d': 'Type your monthly take-home pay along with how many hours you work per day and how many days per month. Pulse uses these three numbers to calculate exactly how much you earn every second.',
+      'info.step2.t': 'Clock in',
+      'info.step2.d': 'When you start your work day, hit Clock In. A precise live ticker begins counting up — down to the millisecond — showing exactly how much money you have earned so far this session.',
+      'info.step3.t': 'Celebrate milestones',
+      'info.step3.d': 'Every few minutes you will hit a milestone — a small celebration appears to mark the moment. After larger amounts, you get a full-screen money rain. Earning money should feel rewarding.',
+      'info.step4.t': 'Clock out and review',
+      'info.step4.d': 'When your day ends, clock out to see your total earnings, total time worked, milestones hit, and your effective hourly rate for this session.',
+      'faq': [
+        ['Is Pulse free to use?', 'Yes. The core calculator — entering your salary, watching the live ticker, hitting milestones, and seeing daily results — is completely free. Pulse Pro is an optional one-time {PRICE} upgrade that unlocks themes, tax mode, daily goals, pause, custom milestones, and removes ads.'],
+        ['How accurate is the calculation?', 'The ticker uses your inputs (monthly salary ÷ monthly hours) to compute a per-millisecond rate, then multiplies by elapsed time. It is mathematically exact. For real take-home, enable Pro and set your tax rate.'],
+        ['Does Pulse store my salary information?', 'Your inputs are saved only in your own browser using localStorage. Nothing is sent to a server. Clearing your browser data will reset everything.'],
+        ['What currencies are supported?', 'Currently US Dollar (USD) and Chinese Yuan (CNY). The currency follows your language selection.'],
+        ['What happens if I close the tab while working?', 'The session ends. Pulse is designed for a single continuous work session — clock in when you start, clock out when you finish.'],
+        ['How do I get Pulse Pro?', 'Click the PRO button at the top of the page. The {PRICE} payment is a one-time fee with lifetime access. No subscription.']
+      ],
+
+      // Cookie
+      'cookie.text': 'We use cookies to improve your experience and to serve personalized ads via Google AdSense. See our <a data-modal="privacy">Privacy Policy</a> for details.',
+      'cookie.accept': 'Accept all',
+      'cookie.essential': 'Essential only',
+
+      // Privacy modal
+      'privacy.label': 'Legal',
+      'privacy.title': 'Privacy Policy',
+      'privacy.body': `
+        <p><strong>Last updated:</strong> May 16, 2026</p>
+        <p>This Privacy Policy explains how Pulse ("we", "us") handles information when you use our website.</p>
+
+        <h3>What we collect</h3>
+        <p>Pulse is a client-side calculator. The numbers you enter (salary, working hours, working days, tax rate, daily goal) are stored only in your own browser using <em>localStorage</em>. We do not transmit, collect, or have access to that information on any server.</p>
+        <p>We do not require account creation. We do not ask for your name, email, or personal contact information.</p>
+
+        <h3>Cookies and similar technologies</h3>
+        <p>We use a small number of cookies and localStorage entries for the following purposes:</p>
+        <ul>
+          <li><strong>Preferences:</strong> remembering your language, currency, theme, and recent inputs.</li>
+          <li><strong>Consent:</strong> remembering your cookie choice so we do not ask again.</li>
+          <li><strong>Pro status:</strong> remembering that you have purchased Pulse Pro.</li>
+        </ul>
+
+        <h3>Advertising</h3>
+        <p>Free users see ads served by Google AdSense. Google and its third-party vendors use cookies to serve ads based on your prior visits to this and other websites.</p>
+        <ul>
+          <li>Google uses the DoubleClick DART cookie to serve ads based on a user's visit to our site and other sites on the Internet.</li>
+          <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
+          <li>You may also opt out of third-party vendor cookies at <a href="http://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>.</li>
+        </ul>
+        <p>If you decline non-essential cookies, ads may still appear but will not be personalized.</p>
+
+        <h3>Children's privacy</h3>
+        <p>Pulse is intended for general audiences and does not knowingly collect information from children under 13.</p>
+
+        <h3>Changes to this policy</h3>
+        <p>We may update this policy from time to time. The "Last updated" date at the top will change accordingly.</p>
+
+        <h3>Contact</h3>
+        <p>Questions about this policy? Email <a href="mailto:support@arknove.com">support@arknove.com</a>.</p>
+      `,
+
+      // Terms modal
+      'terms.label': 'Legal',
+      'terms.title': 'Terms of Service',
+      'terms.body': `
+        <p><strong>Last updated:</strong> May 16, 2026</p>
+        <p>By using Pulse, you agree to these terms. If you do not agree, please do not use the site.</p>
+
+        <h3>Service description</h3>
+        <p>Pulse is a real-time salary calculator that estimates earnings based on numbers you enter. It is provided for informational and motivational purposes only. It is not financial, tax, or legal advice.</p>
+
+        <h3>No guarantee of accuracy</h3>
+        <p>The calculations are mathematical projections based on the inputs you provide. They do not account for taxes, deductions, bonuses, overtime, or any other factor unless you explicitly configure them. Always consult official payroll records for real figures.</p>
+
+        <h3>Pulse Pro purchase</h3>
+        <p>Pulse Pro is a one-time payment of {PRICE} that unlocks advanced features for as long as the Pulse service remains available. We reserve the right to change the feature set, but the core advertised features (themes, tax mode, daily goals, pause, custom milestones, no ads) will remain available throughout the lifetime of the service.</p>
+
+        <h3>Refunds</h3>
+        <p>Due to the nature of digital goods, all sales are generally final. However, we honor the following refund case:</p>
+        <ul>
+          <li><strong>Technical failure</strong>: if Pro features fail to activate or work as advertised and we cannot resolve it within 7 days of your report, a full refund is provided regardless of purchase date.</li>
+        </ul>
+
+        <h3>Service continuity and lifetime access</h3>
+        <p>"Lifetime access" refers to the operational lifetime of the Pulse service, not the user's lifetime. This is standard practice for digital products.</p>
+        <ul>
+          <li>We will provide <strong>at least 60 days' written notice</strong> on this website before any planned discontinuation of the service.</li>
+          <li>If the service is discontinued, Pro purchases made within the prior <strong>30 days</strong> will be refunded in full automatically.</li>
+          <li>Purchases older than 30 days at the time of discontinuation are non-refundable, as the service has been provided as paid for.</li>
+          <li>Because Pulse runs entirely in your browser with no server dependency, your installed copy may continue to work locally even after the service is discontinued.</li>
+        </ul>
+
+        <h3>Acceptable use</h3>
+        <p>Do not attempt to bypass paywalls, reverse engineer the service to harm it, or use it for any illegal purpose.</p>
+
+        <h3>Disclaimer of warranties</h3>
+        <p>Pulse is provided "as is" without warranties of any kind. We are not liable for any decisions made based on calculations from this site.</p>
+
+        <h3>Contact</h3>
+        <p>Questions? Email <a href="mailto:support@arknove.com">support@arknove.com</a>.</p>
+      `,
+
+      // About modal
+      'about.label': 'About',
+      'about.title': 'About Pulse',
+      'about.body': `
+        <p>Pulse is a real-time salary calculator that turns your monthly paycheck into a live, second-by-second ticker. It exists for one simple reason: <em>seeing your money tick up makes your work feel real</em>.</p>
+        <h3>The idea</h3>
+        <p>Most of us get paid once a month and lose all visceral connection to how that number maps to our actual hours. Pulse closes that loop. Enter your salary, start the clock, and watch the abstract become concrete.</p>
+        <h3>Built for focus</h3>
+        <p>Pulse is intentionally minimal. One job, done well, with a tasteful design. No social features, no notifications, no manipulation. Just you and the ticker.</p>
+        <h3>Pulse Pro</h3>
+        <p>The core product is free. Pulse Pro is a {PRICE} one-time upgrade for advanced features (themes, tax mode, daily goals, pause, custom milestones, no ads). One payment, lifetime access.</p>
+        <h3>Contact</h3>
+        <p>Feedback, bug reports, ideas — email <a href="mailto:support@arknove.com">support@arknove.com</a>.</p>
+      `,
+
+      // Contact modal
+      'contact.label': 'Contact',
+      'contact.title': 'Contact us',
+      'contact.body': `
+        <p>The best way to reach us is by email.</p>
+        <h3>Email</h3>
+        <p><a href="mailto:support@arknove.com">support@arknove.com</a></p>
+        <p>We read every message but cannot promise a personal reply to all of them. Bug reports, feedback, and feature requests are especially welcome.</p>
+        <h3>Response time</h3>
+        <p>Typically within a few business days. Please include screenshots if you are reporting a bug.</p>
+      `
+    },
+    zh: {
+      'brand.name': '实时工资计算器',
+      'page1.label': '01 / Setup · 输入',
+      'page1.title1': '告诉我你的',
+      'page1.title2': '收入节奏',
+      'page1.sub': '输入薪资数据,然后开始计时——眼看每一秒、每一毫秒都化为收入。',
+      'field.salary': '月薪 · Salary',
+      'field.hours': '日工时 · Hours',
+      'field.days': '月工作日 · Days',
+      'field.salary.hint': '税后月收入',
+      'field.hours.hint': '实际在岗时间',
+      'field.days.hint': '月度实际出勤',
+      'unit.salary': '/ 月',
+      'unit.hours': '小时 / 天',
+      'unit.days': '天 / 月',
+      'preview.hour': '时薪',
+      'preview.min': '分钟薪',
+      'preview.sec': '秒薪',
+      'preview.milestone': '下一里程碑',
+      'btn.clockin': '上班 · 开始计时',
+      'pro.button': 'PRO',
+      'pro.panel.title': '高级控制台',
+      'pro.ctrl.theme': '主题',
+      'pro.ctrl.tax': '税率 (%)',
+      'pro.ctrl.goal': '每日目标',
+      'pro.ctrl.milestone': '自定义里程碑 (0 = 自动)',
+      'pro.ctrl.milestone.hint': '最小 ¥0.50（或填 0 = 自动）',
+      'page2.label': '02 / Working · 工作中',
+      'page2.status': '正在赚钱',
+      'page2.statusPaused': '已暂停',
+      'page2.earned': '已赚取 · Earned',
+      'page2.permin': '每分钟',
+      'page2.persec': '每秒钟',
+      'page2.milestones': '里程碑',
+      'page2.next': '下一里程碑',
+      'page2.nextRain': '下次撒钱',
+      'page2.nextRain.done': '今日撒钱已用完',
+      'takehome': '税后:',
+      'goal.label': '今日目标',
+      'btn.pause': '暂停',
+      'btn.resume': '继续',
+      'btn.clockout': '下班 · 结束今天',
+      'page3.label': '03 / Result · 战报',
+      'page3.greeting': '今日辛苦了 ✦',
+      'page3.sub': '这是你今天用时间换来的真金白银。',
+      'card.totaltime': '总工作时长',
+      'card.milestones': '达成里程碑',
+      'card.hourly': '实际时薪',
+      'card.hourly.sub': '按本次时长换算',
+      'card.progress': '完成进度',
+      'btn.reset': '重新设置',
+      'btn.continue': '继续上班',
+      'pro.modal.label': 'Pulse Pro',
+      'pro.modal.title1': '一次解锁',
+      'pro.modal.title2': '全部功能',
+      'pro.modal.sub': '下方所有功能,永久解锁,不到一杯咖啡的钱。一次买断。',
+      'pro.modal.priceUnit': '一次买断 · 永久使用',
+      'pro.f1.t': '永久无广告',
+      'pro.f1.d': '纯粹的专注。只有你和你的钱。',
+      'pro.f2.t': '5 款主题',
+      'pro.f2.d': '黄金、翡翠、蓝宝石、朱砂、紫水晶。',
+      'pro.f3.t': '税后模式',
+      'pro.f3.d': '设置税率,实时看到真正的到手收入。',
+      'pro.f4.t': '每日目标',
+      'pro.f4.d': '设个目标,看进度条慢慢填满。',
+      'pro.f5.t': '暂停 / 继续',
+      'pro.f5.d': '午饭、上厕所、生活——计时会等你。',
+      'pro.f6.t': '自定义里程碑',
+      'pro.f6.d': '在你真正在意的金额触发庆祝。',
+      // 功能对比表
+      'cmp.head.feature': '功能',
+      'cmp.head.free':    '免费版',
+      'cmp.head.pro':     'Pro 版',
+      'cmp.r1':           '实时计薪',
+      'cmp.r2':           '下班战报',
+      'cmp.r3':           '中英双语',
+      'cmp.r4':           '主题样式',
+      'cmp.r4.free':      '仅金色',
+      'cmp.r4.pro':       '5 款主题',
+      'cmp.r5':           '税后模式(看真实到手)',
+      'cmp.r6':           '每日目标进度',
+      'cmp.r7':           '暂停 / 继续',
+      'cmp.r8':           '自定义里程碑',
+      'cmp.r9':           '广告',
+      'cmp.r9.free':      '会显示',
+      'cmp.r9.pro':       '不显示',
+      'cmp.r10':          '撒钱时刻',
+      'cmp.r10.free':     '每日 2 次',
+      'cmp.r10.pro':      '无限触发',
+      'pro.cta': '升级 · {PRICE}',
+      'pro.maybeLater': '下次再说',
+      'pro.activated': 'Pro ✓',
+      'pro.launch.tag': '🔥 首发限时',
+      'toast.milestone': '里程碑',
+      'bigtoast.label': '撒钱时刻',
+      'footer.tagline': 'EST. 2026 · TIME IS MONEY',
+      'footer.privacy': '隐私',
+      'footer.terms': '条款',
+      'footer.about': '关于',
+      'footer.blog': '博客',
+      'footer.contact': '联系',
+      'footer.status.ready': '准备就绪',
+      'footer.status.working': '工作中',
+      'footer.status.paused': '已暂停',
+      'footer.status.done': '已下班',
+      'ad.label': '广告',
+      'ad.placeholder': '',
+      'weekdays': ['日','一','二','三','四','五','六'],
+
+      'info.how.title': '如何使用',
+      'info.faq.title': '常见问题',
+      'info.step1.t': '输入薪资',
+      'info.step1.d': '填入你的月度税后工资、每天工作小时数,以及每月工作天数。Pulse 用这三个数字,精确算出你每一秒赚多少。',
+      'info.step2.t': '开始计时',
+      'info.step2.d': '上班时点「开始计时」,毫秒级实时计数器立刻开始跳动,告诉你这一秒你赚了多少。',
+      'info.step3.t': '庆祝里程碑',
+      'info.step3.d': '每隔几分钟就会触发一次小庆祝,达到更大金额时还会有全屏撒钱特效。赚钱本该是件让人开心的事。',
+      'info.step4.t': '下班结算',
+      'info.step4.d': '下班时点「结束」,看到今日总收入、总工时、里程碑数、实际时薪。',
+      'faq': [
+        ['Pulse 完全免费吗?', '是的。核心功能——输入薪资、看实时计数、达成里程碑、查看战报——全部免费。Pulse Pro 是可选的一次性 {PRICE} 升级,解锁主题、税后模式、每日目标、暂停、自定义里程碑,并去除广告。'],
+        ['计算精度如何?', '采用「月薪 ÷ 月工时」算出毫秒薪,然后乘以经过时间,数学上完全精确。如需看真实税后,升级 Pro 并设置税率即可。'],
+        ['Pulse 会存储我的薪资信息吗?', '不会。所有输入只保存在你自己浏览器的 localStorage 里,不上传任何服务器。清除浏览器数据即重置。'],
+        ['支持哪些币种?', '目前支持美元 (USD) 和人民币 (CNY)。币种跟随语言自动切换。'],
+        ['工作中关闭标签页会怎样?', '本次会话会结束。Pulse 设计为一次连续会话——上班开始,下班结束。'],
+        ['怎么购买 Pulse Pro?', '点击顶部 PRO 按钮即可。{PRICE} 一次买断,终身使用,无订阅。']
+      ],
+
+      'cookie.text': '我们使用 Cookie 来改善你的体验,并通过 Google AdSense 提供个性化广告。详见 <a data-modal="privacy">隐私政策</a>。',
+      'cookie.accept': '全部接受',
+      'cookie.essential': '仅必要',
+
+      'privacy.label': '法律声明',
+      'privacy.title': '隐私政策',
+      'privacy.body': `
+        <p><strong>最后更新:</strong> 2026 年 5 月 16 日</p>
+        <p>本政策说明 Pulse(「我们」)如何处理你使用本网站时的信息。</p>
+
+        <h3>我们收集什么</h3>
+        <p>Pulse 是一个纯客户端工具。你输入的数字(月薪、工时、天数、税率、目标)只保存在你自己浏览器的 <em>localStorage</em> 中。我们不传输、不收集、也无法访问这些信息。</p>
+        <p>无需注册账号,无需提供姓名、邮箱或任何个人联系方式。</p>
+
+        <h3>Cookie 和类似技术</h3>
+        <p>我们使用少量 Cookie 和 localStorage 用于:</p>
+        <ul>
+          <li><strong>偏好:</strong> 记住你的语言、币种、主题和最近输入。</li>
+          <li><strong>同意:</strong> 记住你的 Cookie 选择,避免重复询问。</li>
+          <li><strong>Pro 状态:</strong> 记住你是否购买了 Pulse Pro。</li>
+        </ul>
+
+        <h3>广告</h3>
+        <p>免费用户看到的广告由 Google AdSense 提供。Google 及其第三方供应商可能基于你过往访问本站及其他网站的记录,使用 Cookie 投放广告。</p>
+        <ul>
+          <li>Google 使用 DoubleClick DART Cookie,根据用户访问本站及互联网上其他站点的情况投放广告。</li>
+          <li>你可以前往 <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google 广告设置</a> 退出个性化广告。</li>
+          <li>也可在 <a href="http://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> 退出第三方供应商的 Cookie。</li>
+        </ul>
+        <p>拒绝非必要 Cookie 后仍可能看到广告,但不会基于个性化数据。</p>
+
+        <h3>儿童隐私</h3>
+        <p>Pulse 面向一般用户,不会有意收集 13 岁以下儿童的信息。</p>
+
+        <h3>政策更新</h3>
+        <p>我们可能不时更新本政策,顶部「最后更新」日期会同步变更。</p>
+
+        <h3>联系</h3>
+        <p>有疑问? <a href="mailto:support@arknove.com">support@arknove.com</a></p>
+      `,
+
+      'terms.label': '法律声明',
+      'terms.title': '服务条款',
+      'terms.body': `
+        <p><strong>最后更新:</strong> 2026 年 5 月 16 日</p>
+        <p>使用 Pulse 即表示你同意以下条款。如不同意,请勿使用本站。</p>
+
+        <h3>服务说明</h3>
+        <p>Pulse 是一款实时工资计算器,基于你输入的数字估算收入,仅供参考和娱乐用途。不构成任何财务、税务或法律建议。</p>
+
+        <h3>不保证精确</h3>
+        <p>计算结果是基于你输入数据的数学推算,不自动考虑税费、扣款、奖金、加班等因素(除非你手动配置)。实际收入请以官方工资单为准。</p>
+
+        <h3>Pulse Pro 购买</h3>
+        <p>Pulse Pro 为 {PRICE} 一次性付款,在 Pulse 服务存续期间享有高级功能的使用权。功能集可能调整,但已宣传的核心功能(主题、税后模式、每日目标、暂停、自定义里程碑、无广告)将在服务存续期内始终保持可用。</p>
+
+        <h3>退款政策</h3>
+        <p>数字商品原则上不退款。但以下情况我们一定退:</p>
+        <ul>
+          <li><strong>技术故障</strong>:若 Pro 功能无法激活或不能正常工作,且我们在收到反馈后 7 天内无法解决,无论购买时间长短均全额退款。</li>
+        </ul>
+
+        <h3>服务存续与「终身使用」说明</h3>
+        <p>「终身使用」指 Pulse 服务的存续期,而非用户的自然寿命。这是数字产品行业的标准做法。</p>
+        <ul>
+          <li>如计划关闭服务,我们将提前 <strong>至少 60 天</strong> 在本网站发布公告。</li>
+          <li>关闭前 <strong>30 天内</strong> 的 Pro 购买将自动全额退款。</li>
+          <li>关闭时已超过 30 天的购买不予退款,因为服务已按付费内容履约。</li>
+          <li>由于 Pulse 完全在你浏览器中运行、无服务器依赖,即使服务关闭,你本地的副本仍可能继续使用。</li>
+        </ul>
+
+        <h3>使用规范</h3>
+        <p>禁止绕过付费墙、恶意逆向工程,或将本服务用于非法用途。</p>
+
+        <h3>免责声明</h3>
+        <p>Pulse 按「现状」提供,不附带任何明示或暗示的保证。我们不对基于本站计算结果做出的任何决策负责。</p>
+
+        <h3>联系</h3>
+        <p>有疑问? <a href="mailto:support@arknove.com">support@arknove.com</a></p>
+      `,
+
+      'about.label': '关于',
+      'about.title': '关于 Pulse',
+      'about.body': `
+        <p>Pulse 是一款实时工资计算器,把你的月薪变成一个秒秒跳动的实时计数器。它存在的理由很简单: <em>看着钱在跳,工作才有真实感</em>。</p>
+        <h3>初衷</h3>
+        <p>大多数人一个月才发一次工资,根本感受不到这个数字和当下时间的关系。Pulse 把这个回路接上——输入工资、按下开始、看抽象变具体。</p>
+        <h3>为专注而生</h3>
+        <p>Pulse 刻意保持极简,只做一件事且做好。没有社交功能、没有推送、没有套路。只有你和那个跳动的数字。</p>
+        <h3>Pulse Pro</h3>
+        <p>核心免费,Pulse Pro 是 {PRICE} 一次性升级,解锁主题、税后模式、每日目标、暂停、自定义里程碑、无广告。一次付款,永久使用。</p>
+        <h3>联系</h3>
+        <p>反馈、bug、建议都欢迎: <a href="mailto:support@arknove.com">support@arknove.com</a></p>
+      `,
+
+      'contact.label': '联系',
+      'contact.title': '联系我们',
+      'contact.body': `
+        <p>最好的联系方式是邮件。</p>
+        <h3>邮箱</h3>
+        <p><a href="mailto:support@arknove.com">support@arknove.com</a></p>
+        <p>每一封邮件我们都会读,但无法保证全部回复。Bug 反馈、产品建议、新功能想法,我们尤其欢迎。</p>
+        <h3>回复时间</h3>
+        <p>通常几个工作日内。Bug 反馈请附截图。</p>
+      `
+    }
+  };
+
+  /* =============== Currencies (bound to language) =============== */
+  const currencies = {
+    USD: { symbol: '$', code: 'USD', defaultSalary: 5000 },
+    CNY: { symbol: '¥', code: 'CNY', defaultSalary: 10000 }
+  };
+
+  /* =============== State =============== */
+  const today = () => new Date().toISOString().slice(0, 10);
+  const LS = {
+    get: (k, d) => { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch(e) { return d; } },
+    set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} }
+  };
+
+
+  const state = {
+    lang: LS.get('pulse_lang', 'en'),
+    currency: LS.get('pulse_currency', 'USD'),
+    isPro: LS.get('pulse_is_pro', false),
+    theme: LS.get('pulse_theme', 'theme-gold'),
+
+    salary: LS.get('pulse_salary', null),
+    hoursPerDay: LS.get('pulse_hours', 8),
+    daysPerMonth: LS.get('pulse_days', 22),
+    taxRate: LS.get('pulse_tax', 0),
+    dailyGoal: LS.get('pulse_goal', 0),
+    customMilestone: LS.get('pulse_custom_milestone', 0),
+
+    startTime: 0,
+    rafId: null,
+    earned: 0,
+    elapsed: 0,
+    accumulatedElapsed: 0,
+    isPaused: false,
+    milestones: 0,
+    lastMilestone: 0,
+    lastBigMilestone: 0,
+    milestoneStep: 5,
+    // Free user rain: rain trigger amounts (perMin*10 and perMin*60)
+    freeRainThresholds: [],
+    freeRainHit: 0,
+    lastRainTime: 0,
+    // Tracks earned amount at previous tick, used to detect "catch-up" frames
+    // (e.g. first frame after tab returns from background) so we can advance
+    // milestone counters without playing a stale, intrusive money-rain animation.
+    lastTickEarned: 0
+  };
+
+  /* =============== Helpers =============== */
+  const $ = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const fmt2 = n => String(n).padStart(2, '0');
+  const fmt3 = n => String(n).padStart(3, '0');
+  const t = (k) => (i18n[state.lang][k]) ?? k;
+  const curSym = () => currencies[state.currency].symbol;
+  const fmtCur = (n, dec) => curSym() + (dec === undefined ? n.toFixed(2) : n.toFixed(dec));
+
+  function computeRates() {
+    const monthlyHours = state.hoursPerDay * state.daysPerMonth;
+    const perHour = monthlyHours > 0 ? state.salary / monthlyHours : 0;
+    return {
+      perHour,
+      perMin: perHour / 60,
+      perSec: perHour / 3600,
+      perMs: perHour / 3600000
+    };
+  }
+
+  // NEW: milestone = perMin * 5  (custom override allowed for Pro)
+  function chooseMilestoneStep(perMin) {
+    // User-set custom milestone (Pro only); else default to perMin * 5 (≈ 5 minutes of earnings).
+    // The frontend validates the input field (MILESTONE_MIN = 0.5), so normal users
+    // will never reach a tiny value here. The hard floor below is only a safety net for:
+    //   - localStorage tampering
+    //   - F12 console manipulation
+    //   - the rare case where perMin is 0 (no salary set)
+    let step;
+    if (state.isPro && state.customMilestone > 0) {
+      step = state.customMilestone;
+    } else {
+      step = perMin * 5;
+    }
+    // Hard floor: $0.50 OR perMin*0.5 (≈30s of earnings), whichever is greater.
+    // Paired with the 1-second rain throttle in the work loop, this guarantees no freeze.
+    const safetyFloor = Math.max(0.5, perMin * 0.5);
+    return Math.max(safetyFloor, step);
+  }
+
+  function formatMoney(amount) {
+    amount = Math.max(0, amount);
+    const whole = Math.floor(amount);
+    const fracRaw = (amount - whole) * 100;
+    const frac = Math.floor(fracRaw);
+    const ms = Math.floor((fracRaw - frac) * 1000);
+    return { whole, frac, ms };
+  }
+
+  function formatTime(ms) {
+    const totalSec = Math.floor(ms / 1000);
+    return {
+      h: Math.floor(totalSec / 3600),
+      m: Math.floor((totalSec % 3600) / 60),
+      s: totalSec % 60,
+      ms: Math.floor(ms % 1000)
+    };
+  }
+
+  /* =============== i18n rendering =============== */
+  // Substitute {PRICE} / {PRICE_ORIGINAL} in any string
+  function subPrice(s) {
+    if (typeof s !== 'string') return s;
+    return s
+      .replaceAll('{PRICE}', currentPrice())
+      .replaceAll('{PRICE_ORIGINAL}', PRICING.ORIGINAL);
+  }
+
+  function renderI18n() {
+    document.body.classList.toggle('lang-zh', state.lang === 'zh');
+    document.body.classList.toggle('lang-en', state.lang === 'en');
+    document.documentElement.lang = state.lang === 'zh' ? 'zh-CN' : 'en';
+
+    $$('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      let val = i18n[state.lang][key];
+      if (val !== undefined && typeof val === 'string') {
+        val = subPrice(val);
+        // Cookie text contains HTML link
+        if (key === 'cookie.text') el.innerHTML = val;
+        else el.textContent = val;
+      }
+    });
+
+    $('#page1-title').innerHTML = `${t('page1.title1')}<br><span class="em">${t('page1.title2')}</span>`;
+    $('#modal-title').innerHTML = `${t('pro.modal.title1')} <span class="em">${t('pro.modal.title2')}</span>`;
+    $('#globe-label').textContent = state.lang === 'zh' ? '中' : 'EN';
+
+    // Content modals (with price substitution)
+    $('#privacy-body').innerHTML = subPrice(t('privacy.body'));
+    $('#terms-body').innerHTML = subPrice(t('terms.body'));
+    $('#about-body').innerHTML = subPrice(t('about.body'));
+    $('#contact-body').innerHTML = subPrice(t('contact.body'));
+
+    // FAQ (with price substitution)
+    const faq = i18n[state.lang]['faq'] || [];
+    $('#faq-list').innerHTML = faq.map(([q, a]) => `
+      <div class="faq-item">
+        <div class="faq-q">${subPrice(q)}</div>
+        <div class="faq-a">${subPrice(a)}</div>
+      </div>
+    `).join('');
+    $$('#faq-list .faq-q').forEach(el => {
+      el.addEventListener('click', () => el.parentElement.classList.toggle('open'));
+    });
+
+    // Globe items active state
+    $$('.globe-item').forEach(item => {
+      item.classList.toggle('on', item.getAttribute('data-lang') === state.lang);
+    });
+
+    // Re-run launch pricing UI (covers price display + countdown lang switch)
+    initLaunchPricing();
+
+    // Status
+    const page = $$('.page.active')[0]?.id;
+    const statusKey = state.isPaused ? 'footer.status.paused'
+                    : page === 'page-work' ? 'footer.status.working'
+                    : page === 'page-result' ? 'footer.status.done'
+                    : 'footer.status.ready';
+    $('#status').textContent = t(statusKey);
+    $('#clock-status-text').textContent = state.isPaused ? t('page2.statusPaused') : t('page2.status');
+    $('#pause-label').textContent = state.isPaused ? t('btn.resume') : t('btn.pause');
+
+    updateDateTime();
+    updatePreview();
+  }
+
+  /* =============== Currency rendering =============== */
+  function renderCurrency() {
+    $('#unit-salary').textContent = t('unit.salary');
+    $('#m-cur').textContent = curSym();
+    $('#r-cur').textContent = curSym();
+    updatePreview();
+  }
+
+  /* =============== Input page =============== */
+  // Tracks whether the last readInputs() had to clamp a too-small custom milestone.
+  // Consumers (startWork) can use this to surface a friendly notice to the user.
+  let __lastMilestoneWasSnapped = false;
+
+  function readInputs() {
+    state.salary = Math.max(0, parseFloat($('#in-salary').value) || 0);
+    state.hoursPerDay = Math.max(0.5, parseFloat($('#in-hours').value) || 0.5);
+    state.daysPerMonth = Math.max(1, parseFloat($('#in-days').value) || 1);
+    state.taxRate = Math.max(0, Math.min(60, parseFloat($('#in-tax').value) || 0));
+    state.dailyGoal = Math.max(0, parseFloat($('#in-goal').value) || 0);
+
+    // Custom milestone: snap any value < MILESTONE_MIN (but > 0) down to 0 (auto).
+    // This is the explicit, user-visible behavior — we sync the input field too so
+    // the user sees exactly what was saved (no "input shows 0.01, app runs 0.5" mismatch).
+    let rawMilestone = Math.max(0, parseFloat($('#in-milestone').value) || 0);
+    __lastMilestoneWasSnapped = false;
+    if (rawMilestone > 0 && rawMilestone < MILESTONE_MIN) {
+      rawMilestone = 0;
+      $('#in-milestone').value = 0;
+      __lastMilestoneWasSnapped = true;
+    }
+    state.customMilestone = rawMilestone;
+    // Refresh validation UI to clear any lingering red state
+    if (typeof validateMilestoneInput === 'function') validateMilestoneInput();
+
+    // Persist inputs
+    LS.set('pulse_salary', state.salary);
+    LS.set('pulse_hours', state.hoursPerDay);
+    LS.set('pulse_days', state.daysPerMonth);
+    LS.set('pulse_tax', state.taxRate);
+    LS.set('pulse_goal', state.dailyGoal);
+    LS.set('pulse_custom_milestone', state.customMilestone);
+
+    document.body.classList.toggle('tax-on', state.isPro && state.taxRate > 0);
+    document.body.classList.toggle('goal-on', state.isPro && state.dailyGoal > 0);
+  }
+
+  function updatePreview() {
+    readInputs();
+    const r = computeRates();
+    $('#prev-hour').textContent = fmtCur(r.perHour);
+    $('#prev-min').textContent = fmtCur(r.perMin);
+    $('#prev-sec').textContent = fmtCur(r.perSec, 4);
+    const step = chooseMilestoneStep(r.perMin);
+    $('#prev-ms').textContent = fmtCur(step);
+  }
+
+  $$('#in-salary, #in-hours, #in-days, #in-tax, #in-goal, #in-milestone').forEach(el => {
+    el.addEventListener('input', updatePreview);
+  });
+
+  /* =============== Custom milestone validation =============== */
+  // Minimum allowed value (other than 0 which means "auto").
+  // 0.5 is a sensible UX floor: any smaller and the milestone fires too often to be useful,
+  // and visually overlaps with what auto mode produces.
+  const MILESTONE_MIN = 0.5;
+
+  function validateMilestoneInput() {
+    const input = $('#in-milestone');
+    const hint = $('#in-milestone-hint');
+    if (!input || !hint) return;
+    const raw = parseFloat(input.value);
+    const isAuto = !raw || raw === 0;
+    const isTooSmall = raw > 0 && raw < MILESTONE_MIN;
+    input.classList.toggle('invalid', isTooSmall);
+    hint.classList.toggle('warn', isTooSmall);
+    if (isTooSmall) {
+      const isZh = (state && state.lang === 'zh');
+      hint.textContent = isZh
+        ? `⚠ 太小了 · 输入框失焦后将重置为 0（自动）`
+        : `⚠ Too small · will reset to 0 (auto) when you click away`;
+    } else {
+      const defaultText = i18n[state.lang]?.['pro.ctrl.milestone.hint']
+        || 'Minimum $0.50 (or 0 for auto)';
+      hint.textContent = defaultText;
+    }
+  }
+
+  $('#in-milestone').addEventListener('input', validateMilestoneInput);
+
+  $('#in-milestone').addEventListener('blur', () => {
+    const input = $('#in-milestone');
+    const raw = parseFloat(input.value);
+    if (raw > 0 && raw < MILESTONE_MIN) {
+      input.value = 0;
+      state.customMilestone = 0;
+      LS.set('pulse_custom_milestone', 0);
+      validateMilestoneInput();
+      updatePreview();
+    }
+  });
+
+
+  /* =============== Globe dropdown (lang + currency bound) =============== */
+  const globe = $('#globe');
+  const globeBtn = $('#globe-btn');
+
+  function toggleGlobe(force) {
+    const isOpen = force !== undefined ? force : !globe.classList.contains('open');
+    globe.classList.toggle('open', isOpen);
+    globeBtn.setAttribute('aria-expanded', String(isOpen));
+  }
+  globeBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    toggleGlobe();
+  });
+  document.addEventListener('click', e => {
+    if (!globe.contains(e.target)) toggleGlobe(false);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      toggleGlobe(false);
+      // close any open modal
+      $$('.modal-overlay.show').forEach(m => m.classList.remove('show'));
+    }
+  });
+
+  $$('.globe-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const lang = item.getAttribute('data-lang');
+      const cur = item.getAttribute('data-cur');
+      const prevSalary = currencies[state.currency].defaultSalary;
+
+      state.lang = lang;
+      // If user hasn't customized salary away from prior default, switch to new default
+      if (parseFloat($('#in-salary').value) === prevSalary) {
+        $('#in-salary').value = currencies[cur].defaultSalary;
+      }
+      state.currency = cur;
+
+      LS.set('pulse_lang', lang);
+      LS.set('pulse_currency', cur);
+
+      renderI18n();
+      renderCurrency();
+      toggleGlobe(false);
+    });
+  });
+
+  /* =============== Theme switching =============== */
+  $$('#theme-swatches .swatch').forEach(sw => {
+    sw.addEventListener('click', () => {
+      if (!state.isPro) { openModal('proModal'); return; }
+      const theme = sw.getAttribute('data-theme');
+      document.body.classList.remove('theme-gold','theme-emerald','theme-sapphire','theme-crimson','theme-platinum');
+      document.body.classList.add(theme);
+      state.theme = theme;
+      LS.set('pulse_theme', theme);
+      $$('#theme-swatches .swatch').forEach(s => s.classList.toggle('on', s === sw));
+    });
+  });
+
+  /* =============== Modal system =============== */
+  function openModal(id) { $('#' + id).classList.add('show'); }
+  function closeAllModals() { $$('.modal-overlay.show').forEach(m => m.classList.remove('show')); }
+
+  $$('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeAllModals();
+    });
+  });
+  $$('[data-close]').forEach(btn => btn.addEventListener('click', closeAllModals));
+
+  // Footer + cookie text links
+  document.addEventListener('click', e => {
+    const link = e.target.closest('[data-modal]');
+    if (link) {
+      e.preventDefault();
+      const modal = link.getAttribute('data-modal');
+      openModal(modal + 'Modal');
+    }
+  });
+
+  /* =============== Pro flow =============== */
+  // ============================================================
+  // PRICING ENGINE — Multi-Promo System
+  // ============================================================
+  // Pricing tiers:
+  //   • $9.99 ORIGINAL  — anchor (strikethrough), always shown
+  //   • $4.99 REGULAR   — baseline price, default
+  //   • $2.99 SALE      — normal promotions (90% of promo days)
+  //   • $1.99 DEEP_SALE — deep promotions (1-2× per year only)
+  //
+  // Promo precedence (highest wins):
+  //   1) DEEP_SALE holidays (11.11, Black Friday)        → $1.99
+  //   2) NORMAL_SALE holidays (Lunar NY, V-Day, etc.)    → $2.99
+  //   3) MONTH_END (last 3 days of month)                → $2.99
+  //   4) PERSONAL_LAUNCH (first 7 days after first visit)→ $2.99
+  //   5) Default                                          → $4.99
+  // ------------------------------------------------------------
+  const PRICING = {
+    ORIGINAL:  '$9.99',
+    REGULAR:   '$4.99',
+    SALE:      '$2.99',
+    DEEP_SALE: '$1.99'
+  };
+
+  // Holiday calendar — each entry: { name, key, level, startMonth, startDay, endMonth, endDay }
+  // level: 'deep' = $1.99, 'normal' = $2.99
+  // Dates are evaluated in user's local time (good enough for marketing UX)
+  const HOLIDAY_CALENDAR = [
+    // ===== DEEP SALES (only 2 per year) =====
+    {
+      key: '11_11', level: 'deep',
+      startMonth: 11, startDay: 10, endMonth: 11, endDay: 12,
+      labelEN: '🎉 11.11 Mega Sale', labelZH: '🎉 双 11 大促'
+    },
+    {
+      key: 'black_friday', level: 'deep',
+      // Black Friday floats: 4th Friday of November (Nov 23-29). We cover Nov 24-30 as a safe window.
+      startMonth: 11, startDay: 24, endMonth: 11, endDay: 30,
+      labelEN: '🦃 Black Friday', labelZH: '🦃 黑色星期五'
+    },
+    // ===== NORMAL SALES =====
+    {
+      key: 'cyber_monday', level: 'normal',
+      startMonth: 12, startDay: 1, endMonth: 12, endDay: 3,
+      labelEN: '💻 Cyber Monday', labelZH: '💻 网络星期一'
+    },
+    {
+      key: 'valentine', level: 'normal',
+      startMonth: 2, startDay: 13, endMonth: 2, endDay: 15,
+      labelEN: '❤️ Valentine\u2019s Day', labelZH: '❤️ 情人节'
+    },
+    {
+      key: 'double_12', level: 'normal',
+      startMonth: 12, startDay: 11, endMonth: 12, endDay: 13,
+      labelEN: '🛒 12.12 Sale', labelZH: '🛒 双 12 大促'
+    },
+    {
+      key: 'lunar_ny_2027', level: 'normal',
+      // Lunar New Year 2027: Feb 6. Cover Feb 4-8.
+      startMonth: 2, startDay: 4, endMonth: 2, endDay: 8,
+      labelEN: '🧧 Lunar New Year', labelZH: '🧧 春节'
+    },
+    {
+      key: 'new_year', level: 'normal',
+      startMonth: 12, startDay: 30, endMonth: 1, endDay: 2,
+      labelEN: '🎊 New Year', labelZH: '🎊 新年'
+    }
+  ];
+
+  // ----- Personal launch window (first 7 days from first visit) -----
+  const PERSONAL_WINDOW_DAYS = 7;
+  function getPersonalLaunchEnd() {
+    let firstSeen = LS.get('pulse_first_seen');
+    if (!firstSeen) {
+      firstSeen = Date.now();
+      LS.set('pulse_first_seen', firstSeen);
+    }
+    return firstSeen + PERSONAL_WINDOW_DAYS * 86400000;
+  }
+
+  // ----- Date helpers -----
+  function isInHolidayRange(now, h) {
+    const m = now.getMonth() + 1, d = now.getDate();
+    if (h.startMonth <= h.endMonth) {
+      // Normal range within same year
+      return (m > h.startMonth || (m === h.startMonth && d >= h.startDay))
+          && (m < h.endMonth   || (m === h.endMonth   && d <= h.endDay));
+    } else {
+      // Range spans year boundary (e.g. Dec 30 → Jan 2)
+      return (m > h.startMonth || (m === h.startMonth && d >= h.startDay))
+          || (m < h.endMonth   || (m === h.endMonth   && d <= h.endDay));
+    }
+  }
+
+  function daysInMonth(year, month1based) {
+    return new Date(year, month1based, 0).getDate();
+  }
+  function isMonthEnd(now) {
+    const d = now.getDate();
+    const last = daysInMonth(now.getFullYear(), now.getMonth() + 1);
+    return d >= last - 2; // last 3 days
+  }
+  function monthEndDeadline(now) {
+    const last = daysInMonth(now.getFullYear(), now.getMonth() + 1);
+    // 23:59:59.999 of the last day of month
+    return new Date(now.getFullYear(), now.getMonth(), last, 23, 59, 59, 999).getTime();
+  }
+  function holidayDeadline(now, h) {
+    // End of end-day, local time
+    let endYear = now.getFullYear();
+    // Handle year-wrap (Dec 30 → Jan 2): if we're in Dec, endMonth is Jan, so year++
+    if (h.startMonth > h.endMonth && (now.getMonth() + 1) >= h.startMonth) {
+      endYear = now.getFullYear() + 1;
+    }
+    return new Date(endYear, h.endMonth - 1, h.endDay, 23, 59, 59, 999).getTime();
+  }
+
+  // ----- Promo resolution (returns the active promo or null) -----
+  // Returns { price, level, source, label, deadline } or null for regular pricing
+  function resolvePromo() {
+    const now = new Date();
+
+    // 1) Deep-sale holidays (highest priority)
+    for (const h of HOLIDAY_CALENDAR) {
+      if (h.level === 'deep' && isInHolidayRange(now, h)) {
+        return {
+          price: PRICING.DEEP_SALE, level: 'deep', source: 'holiday',
+          label: h, deadline: holidayDeadline(now, h)
+        };
+      }
+    }
+    // 2) Normal-sale holidays
+    for (const h of HOLIDAY_CALENDAR) {
+      if (h.level === 'normal' && isInHolidayRange(now, h)) {
+        return {
+          price: PRICING.SALE, level: 'normal', source: 'holiday',
+          label: h, deadline: holidayDeadline(now, h)
+        };
+      }
+    }
+    // 3) Month-end (last 3 days)
+    if (isMonthEnd(now)) {
+      return {
+        price: PRICING.SALE, level: 'normal', source: 'month_end',
+        label: null, deadline: monthEndDeadline(now)
+      };
+    }
+    // 4) Personal launch (first 7 days)
+    const personalEnd = getPersonalLaunchEnd();
+    if (Date.now() < personalEnd) {
+      return {
+        price: PRICING.SALE, level: 'normal', source: 'personal',
+        label: null, deadline: personalEnd
+      };
+    }
+    // 5) No promo
+    return null;
+  }
+
+  // Current display price (used in {PRICE} template substitutions)
+  function currentPrice() {
+    const p = resolvePromo();
+    return p ? p.price : PRICING.REGULAR;
+  }
+  // Back-compat shim
+  function inLaunchWindow() {
+    return resolvePromo() !== null;
+  }
+
+  // ============================================================
+  // CHECKOUT INTEGRATION (Creem.io)
+  // ============================================================
+  // Current setup: SINGLE Pulse Pro product at $4.99 one-time payment.
+  // All three "tier" URLs point to the same Creem product for now — the
+  // promo system shows the discounted price in the UI, but checkout always
+  // collects the base $4.99 (we'll add real discount codes later via Creem).
+  //
+  // TO SWITCH TO LIVE MODE after KYC approval:
+  //   1. Verify KYC + payout account is approved in Creem dashboard
+  //   2. Replace '/test/' with '/payment' in the three URLs below
+  //      (i.e. https://www.creem.io/test/payment/prod_XXX → https://www.creem.io/payment/prod_XXX)
+  //   3. Deploy. That's it.
+  //
+  // Product ID: prod_EiKuOYEhSerjp4nOcJEQb (Pulse Pro · $4.99 · Arknove store)
+  // ------------------------------------------------------------
+  const CREEM_TEST_MODE = false; // ← flip to false after KYC is approved
+  const CREEM_BASE = CREEM_TEST_MODE
+    ? 'https://www.creem.io/test/payment/'
+    : 'https://www.creem.io/payment/';
+  const CREEM_PRODUCT_ID = 'prod_1GkeBsWL5MVckot6Q73VCy';
+  const CREEM_CHECKOUT_URL = CREEM_BASE + CREEM_PRODUCT_ID;
+
+  // Three-tier pricing via Creem discount codes (no need for separate products):
+  //   REGULAR   ($4.99) — no discount, base product price
+  //   SALE      ($2.99) — discount code PULSESALE  (-$2.00)
+  //   DEEP_SALE ($1.99) — discount code PULSEDEEP  (-$3.00)
+  //
+  // ⚠️ BEFORE GOING LIVE you must create these two discount codes in Creem:
+  //   Creem Dashboard → Commerce → Discounts → New Discount
+  //   1. Code: PULSESALE, type: Fixed, amount: $2.00, applies to Pulse Pro
+  //   2. Code: PULSEDEEP, type: Fixed, amount: $3.00, applies to Pulse Pro
+  // Note: Creem requires discount codes to be uppercase letters and numbers
+  // only — no underscores or special characters. Codes are appended as URL
+  // query params; Creem processes them server-side.
+  const CREEM_DISCOUNT_SALE = 'PULSESALE';
+  const CREEM_DISCOUNT_DEEP = 'PULSEDEEP';
+
+  // LEMON_CONFIG kept as alias so existing references (activeCheckoutUrl etc.)
+  // don't break. Each tier passes a different discount_code via URL so the
+  // price the user sees in the UI matches what Creem actually charges.
+  const LEMON_CONFIG = {
+    CHECKOUT_URL_SALE:      `${CREEM_CHECKOUT_URL}?discount_code=${CREEM_DISCOUNT_SALE}`,      // $2.99
+    CHECKOUT_URL_DEEP_SALE: `${CREEM_CHECKOUT_URL}?discount_code=${CREEM_DISCOUNT_DEEP}`,      // $1.99
+    CHECKOUT_URL_REGULAR:   CREEM_CHECKOUT_URL,                                                 // $4.99
+    CHECKOUT_URL: CREEM_CHECKOUT_URL,
+    get CHECKOUT_URL_LAUNCH() { return this.CHECKOUT_URL_SALE; },
+    USE_LICENSE_VERIFICATION: false
+  };
+
+  // ----- Active checkout URL based on current promo -----
+  function activeCheckoutUrl() {
+    const p = resolvePromo();
+    if (!p) return LEMON_CONFIG.CHECKOUT_URL_REGULAR;
+    if (p.level === 'deep') return LEMON_CONFIG.CHECKOUT_URL_DEEP_SALE;
+    return LEMON_CONFIG.CHECKOUT_URL_SALE;
+  }
+
+  // ----- Localized promo banner text -----
+  function promoLabel(promo, lang) {
+    const isZh = (lang === 'zh');
+    if (!promo) return '';
+    if (promo.source === 'holiday') {
+      return isZh ? promo.label.labelZH : promo.label.labelEN;
+    }
+    if (promo.source === 'month_end') {
+      return isZh ? '🌙 月末特惠' : '🌙 Month-End Sale';
+    }
+    if (promo.source === 'personal') {
+      return isZh ? '🔥 新用户首发价' : '🔥 Founders Pricing';
+    }
+    return '';
+  }
+
+  // Initialize promo UI on load + on language change. Idempotent.
+  function initLaunchPricing() {
+    const promo = resolvePromo();
+    const inPromo = !!promo;
+    // Pick the right checkout URL
+    LEMON_CONFIG.CHECKOUT_URL = activeCheckoutUrl();
+    // Update displayed price everywhere
+    document.querySelectorAll('.js-price-current').forEach(el => {
+      el.textContent = currentPrice();
+    });
+    // Show/hide promo-only elements (anchor price + countdown banner)
+    document.querySelectorAll('.js-launch-only').forEach(el => {
+      el.style.display = inPromo ? '' : 'none';
+    });
+    // Update promo tag text
+    const tagEl = document.querySelector('.price-launch-tag');
+    if (tagEl && inPromo) {
+      tagEl.textContent = promoLabel(promo, state && state.lang);
+    }
+    // Countdown ticker
+    const cdEl = document.getElementById('price-launch-countdown');
+    if (inPromo && cdEl) {
+      const end = promo.deadline;
+      const renderCd = () => {
+        const diff = end - Date.now();
+        if (diff <= 0) {
+          // Promo just ended — re-resolve (next promo may start, or regular kicks in)
+          initLaunchPricing();
+          renderI18n();
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const isZh = (state && state.lang === 'zh');
+        cdEl.textContent = isZh
+          ? `· 剩 ${d}天 ${h}小时 ${m}分`
+          : `· ends in ${d}d ${h}h ${m}m`;
+      };
+      renderCd();
+      // One ticker is enough; subsequent calls reuse it
+      if (!window.__launchCdTimer) {
+        window.__launchCdTimer = setInterval(renderCd, 30000);
+      }
+    } else if (window.__launchCdTimer) {
+      clearInterval(window.__launchCdTimer);
+      window.__launchCdTimer = null;
+    }
+  }
+
+  $('#pro-btn').addEventListener('click', () => {
+    if (state.isPro) return;
+    openModal('proModal');
+  });
+
+  $('#btn-upgrade').addEventListener('click', () => {
+    // Creem-hosted checkout. After payment, Creem redirects back to
+    // https://arknove.com/?upgrade=success (configured in Creem dashboard).
+    // The ?upgrade=success listener (initFromStorage area) activates Pro.
+    //
+    // We use full-page redirect (not popup) because:
+    //   - No SDK needed (Creem's hosted page handles all card logic)
+    //   - Works on mobile reliably (popups often blocked)
+    //   - Simpler return-URL flow
+    window.location.href = LEMON_CONFIG.CHECKOUT_URL;
+  });
+
+  // STUB: future backend verification (currently unused).
+  // When/if you add a serverless backend to verify payments server-side via
+  // Creem's API (GET /v1/checkouts/{checkout_id}), call this from
+  // maybeActivateProFromReturnUrl() instead of activating Pro directly.
+  //
+  // Endpoint example (Cloudflare Worker):
+  //   POST /api/verify-checkout  body: { checkout_id }
+  //   → calls Creem API with your secret key (server-side, never exposed)
+  //   → returns { valid: true, product_id, status: 'paid' } if checkout is legit
+  //
+  // eslint-disable-next-line no-unused-vars
+  async function verifyCheckoutWithBackend(checkoutId) {
+    try {
+      const res = await fetch('/api/verify-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ checkout_id: checkoutId })
+      });
+      const data = await res.json();
+      return data.valid && data.product_id === CREEM_PRODUCT_ID;
+    } catch (err) {
+      console.error('Checkout verify error:', err);
+      return false;
+    }
+  }
+
+  function activatePro(licenseKey) {
+    state.isPro = true;
+    LS.set('pulse_is_pro', true);
+    if (licenseKey) LS.set('pulse_license_key', licenseKey);
+    document.body.classList.add('is-pro');
+    $('#pro-btn').classList.add('active');
+    $('#pro-btn').innerHTML = `<span>✓</span><span>${t('pro.activated')}</span>`;
+    readInputs();
+  }
+
+  // ============================================================
+  // DEMO RESET BUTTON — visible only on localhost / file://
+  // Clears all localStorage (Pro status, inputs, theme, cookie consent)
+  // so you can preview the free-user experience.
+  // ============================================================
+  const isLocalEnv = (
+    location.protocol === 'file:' ||
+    location.hostname === 'localhost' ||
+    location.hostname === '127.0.0.1' ||
+    location.hostname.endsWith('.local')
+  );
+  if (isLocalEnv) {
+    const demoBtn = document.createElement('button');
+    demoBtn.id = 'demo-reset';
+    demoBtn.innerHTML = '🧪 Reset (demo)';
+    demoBtn.title = 'Local-only · clears all Pulse data and reloads as a free user';
+    demoBtn.style.cssText = `
+      position: fixed; bottom: 1rem; left: 1rem; z-index: 300;
+      background: #1a1a23; color: #f5c14b; border: 1px solid rgba(245,193,75,0.5);
+      padding: 0.55rem 0.9rem; border-radius: 4px; cursor: pointer;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.1em; opacity: 0.55; transition: opacity 0.2s;
+    `;
+    demoBtn.onmouseenter = () => demoBtn.style.opacity = '1';
+    demoBtn.onmouseleave = () => demoBtn.style.opacity = '0.55';
+    demoBtn.onclick = () => {
+      if (confirm('Reset all Pulse data and reload as a fresh free user?')) {
+        Object.keys(localStorage)
+          .filter(k => k.startsWith('pulse_'))
+          .forEach(k => localStorage.removeItem(k));
+        location.reload();
+      }
+    };
+    document.body.appendChild(demoBtn);
+  }
+
+  /* =============== Pause button =============== */
+  $('#btn-pause').addEventListener('click', () => {
+    if (!state.isPro) { openModal('proModal'); return; }
+    if (state.isPaused) resume(); else pauseWork();
+  });
+  function pauseWork() {
+    state.isPaused = true;
+    cancelAnimationFrame(state.rafId);
+    state.accumulatedElapsed += performance.now() - state.startTime;
+    state.elapsed = state.accumulatedElapsed;
+    document.body.classList.add('is-paused');
+    $('#pause-label').textContent = t('btn.resume');
+    $('#clock-status-text').textContent = t('page2.statusPaused');
+    $('#status').textContent = t('footer.status.paused');
+  }
+  function resume() {
+    state.isPaused = false;
+    state.startTime = performance.now();
+    document.body.classList.remove('is-paused');
+    $('#pause-label').textContent = t('btn.pause');
+    $('#clock-status-text').textContent = t('page2.status');
+    $('#status').textContent = t('footer.status.working');
+    startTimer();
+  }
+  // Keyboard: space → pause/resume (Pro)
+  document.addEventListener('keydown', e => {
+    if (e.code === 'Space' && $('#page-work').classList.contains('active')) {
+      // don't fight inputs
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      e.preventDefault();
+      $('#btn-pause').click();
+    }
+  });
+
+  /* =============== Page nav =============== */
+  function showPage(id) {
+    $$('.page').forEach(p => p.classList.remove('active'));
+    $('#' + id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  /* =============== Clock in =============== */
+  function startWork() {
+    readInputs();
+    state.startTime = performance.now();
+    state.accumulatedElapsed = 0;
+    state.earned = 0;
+    state.elapsed = 0;
+    state.milestones = 0;
+    state.lastMilestone = 0;
+    state.lastBigMilestone = 0;
+    state.lastRainTime = 0;  // Reset rain throttle on new work session
+    state.lastTickEarned = 0; // Reset catch-up detector on new work session
+    state.isPaused = false;
+    document.body.classList.remove('is-paused');
+
+    // If readInputs() had to clamp a too-small milestone, inform the user.
+    // The input field was already reset to 0; this toast tells them why.
+    if (__lastMilestoneWasSnapped) {
+      const isZh = (state && state.lang === 'zh');
+      $('#toast-text').textContent = isZh
+        ? '⚠ 自定义里程碑过小,已切换为自动模式'
+        : '⚠ Custom milestone too small — switched to auto mode';
+      const toast = $('#toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3200);
+      __lastMilestoneWasSnapped = false; // consume the flag
+    }
+
+    const r = computeRates();
+    state.milestoneStep = chooseMilestoneStep(r.perMin);
+
+    // Free user rain thresholds: perMin*10 (1st), perMin*60 (2nd)
+    state.freeRainThresholds = [r.perMin * 10, r.perMin * 60];
+    state.freeRainHit = 0;
+
+    const now = new Date();
+    $('#start-time').textContent = `START · ${fmt2(now.getHours())}:${fmt2(now.getMinutes())}:${fmt2(now.getSeconds())}`;
+    $('#rate-min').textContent = fmtCur(r.perMin);
+    $('#rate-sec').textContent = fmtCur(r.perSec, 4);
+    $('#milestone-count').textContent = '0';
+    $('#ms-progress').style.width = '0%';
+    $('#ms-target').textContent = fmtCur(state.milestoneStep);
+    $('#m-cur').textContent = curSym();
+    $('#pause-label').textContent = t('btn.pause');
+    $('#clock-status-text').textContent = t('page2.status');
+
+    if (state.isPro && state.dailyGoal > 0) {
+      $('#goal-total').textContent = fmtCur(state.dailyGoal);
+    }
+
+    $('#status').textContent = t('footer.status.working');
+    showPage('page-work');
+    startTimer();
+  }
+  $('#btn-clock-in').addEventListener('click', startWork);
+
+  /* =============== Timer loop =============== */
+  function startTimer() {
+    cancelAnimationFrame(state.rafId);
+    const rates = computeRates();
+    const tick = () => {
+      const now = performance.now();
+      const elapsed = state.accumulatedElapsed + (now - state.startTime);
+      state.elapsed = elapsed;
+      const earned = elapsed * rates.perMs;
+      state.earned = earned;
+
+      const tt = formatTime(elapsed);
+      $('#work-time').innerHTML = `${fmt2(tt.h)}:${fmt2(tt.m)}:${fmt2(tt.s)}<span class="ms">.${fmt3(tt.ms)}</span>`;
+
+      const m = formatMoney(earned);
+      $('#m-whole').textContent = m.whole.toLocaleString('en-US');
+      $('#m-dec').textContent = fmt2(m.frac);
+      $('#m-ms').textContent = fmt3(m.ms);
+
+      if (state.isPro && state.taxRate > 0) {
+        const takeHome = earned * (1 - state.taxRate / 100);
+        $('#m-takehome').textContent = fmtCur(takeHome);
+      }
+
+      const reached = Math.floor(earned / state.milestoneStep);
+      const nextMilestone = (reached + 1) * state.milestoneStep;
+      const prevMilestone = reached * state.milestoneStep;
+      const pct = ((earned - prevMilestone) / state.milestoneStep) * 100;
+      $('#ms-target').textContent = fmtCur(nextMilestone);
+      $('#ms-progress').style.width = Math.min(100, pct) + '%';
+
+      if (state.isPro && state.dailyGoal > 0) {
+        const goalPct = (earned / state.dailyGoal) * 100;
+        $('#goal-reached').textContent = fmtCur(earned);
+        $('#goal-pct').textContent = Math.min(999, goalPct).toFixed(1) + '%';
+        $('#goal-progress').style.width = Math.min(100, goalPct) + '%';
+      }
+
+      // Regular milestone (perMin × 5)
+      if (reached > state.lastMilestone) {
+        state.lastMilestone = reached;
+        state.milestones = reached;
+        $('#milestone-count').textContent = reached;
+        celebrate(reached * state.milestoneStep);
+      }
+
+      // -------- Catch-up frame detection --------
+      // If a single tick's earned-delta is dramatically larger than a normal frame
+      // (e.g. the tab was backgrounded and rAF paused; first frame on return jumps
+      // forward by minutes-of-earnings at once), treat this as a "catch-up" frame:
+      // counters/state still advance to the correct values, but we DO NOT play the
+      // 18-second money-rain animation — it would arrive far after the moment it's
+      // supposed to celebrate and feel like an out-of-context ambush.
+      const prevTickEarned = state.lastTickEarned || earned;
+      const tickEarnDelta = earned - prevTickEarned;
+      state.lastTickEarned = earned;
+      // Threshold: more than 2 seconds of normal earnings crossed in one frame.
+      // Real frames at 60fps are ~16ms (≈0.016s of earnings), so 2s is ~125× normal.
+      // This easily separates legitimate frames from background-throttled catch-up.
+      const isCatchUpFrame = tickEarnDelta > rates.perMs * 2000;
+
+      // BIG rain triggers
+      // Safety throttle: under no circumstances can two rains fire within 1s of each other.
+      // This is a belt-and-suspenders guard against pathological milestone configs.
+      const MIN_RAIN_INTERVAL_MS = 1000;
+      const sinceLastRain = Date.now() - (state.lastRainTime || 0);
+      const rainAllowed = sinceLastRain >= MIN_RAIN_INTERVAL_MS;
+
+      if (state.isPro) {
+        // Pro: every 5x milestone step
+        const bigStep = state.milestoneStep * 5;
+        const bigReached = Math.floor(earned / bigStep);
+        if (bigReached > state.lastBigMilestone && rainAllowed && !isCatchUpFrame) {
+          state.lastBigMilestone = bigReached;
+          state.lastRainTime = Date.now();
+          moneyRain(bigReached * bigStep);
+        } else if (bigReached > state.lastBigMilestone) {
+          // Throttled OR catch-up: advance counter so we don't replay all skipped rains later.
+          state.lastBigMilestone = bigReached;
+        }
+      } else {
+        // Free: 1st at perMin*10, 2nd at perMin*60, max 2/day
+        if (isCatchUpFrame) {
+          // Catch-up: silently advance past EVERY threshold already crossed,
+          // not just one. Otherwise a single catch-up tick only consumes the
+          // first crossed threshold and the next (normal) tick will fire a
+          // stale rain for the second one.
+          while (state.freeRainHit < state.freeRainThresholds.length &&
+                 earned >= state.freeRainThresholds[state.freeRainHit]) {
+            state.freeRainHit++;
+          }
+        } else if (state.freeRainHit < state.freeRainThresholds.length) {
+          const nextThreshold = state.freeRainThresholds[state.freeRainHit];
+          if (earned >= nextThreshold) {
+            const dayKey = 'pulse_free_rain_' + today();
+            const todayCount = LS.get(dayKey, 0);
+            if (todayCount < 2 && rainAllowed) {
+              LS.set(dayKey, todayCount + 1);
+              state.lastRainTime = Date.now();
+              moneyRain(nextThreshold);
+            }
+            state.freeRainHit++;
+          }
+        }
+      }
+
+      updateRainReminder(earned, rates);
+
+      state.rafId = requestAnimationFrame(tick);
+    };
+    state.rafId = requestAnimationFrame(tick);
+  }
+
+  /* =============== Rain reminder (next money-rain target) =============== */
+  // Updates the small "Next Rain" line under the milestone bar each tick.
+  // Pro:  next bigStep target (every milestoneStep × 5)
+  // Free: next of the 2 daily thresholds (perMin*10, perMin*60), respecting 2/day cap
+  function updateRainReminder(earned, rates) {
+    const el = $('#rain-reminder');
+    const targetEl = $('#rain-rem-target');
+    if (!el || !targetEl) return;
+
+    let nextAmount = 0;
+    let exhausted = false;
+
+    if (state.isPro) {
+      const bigStep = state.milestoneStep * 5;
+      // Next bigStep boundary strictly above the current earned amount
+      const nextBigIdx = Math.floor(earned / bigStep) + 1;
+      nextAmount = nextBigIdx * bigStep;
+    } else {
+      // Free: respect the per-day quota AND the 2-threshold limit
+      const dayKey = 'pulse_free_rain_' + today();
+      const todayCount = LS.get(dayKey, 0);
+      if (state.freeRainHit >= state.freeRainThresholds.length || todayCount >= 2) {
+        exhausted = true;
+      } else {
+        nextAmount = state.freeRainThresholds[state.freeRainHit];
+      }
+    }
+
+    if (exhausted) {
+      el.classList.add('is-done');
+      targetEl.textContent = t('page2.nextRain.done');
+      return;
+    }
+    el.classList.remove('is-done');
+
+    const remaining = Math.max(0, nextAmount - earned);
+    const secsToGo = rates.perSec > 0 ? remaining / rates.perSec : 0;
+
+    let timeStr;
+    if (secsToGo < 1) {
+      timeStr = state.lang === 'zh' ? '即将' : 'soon';
+    } else if (secsToGo < 60) {
+      timeStr = `~${Math.ceil(secsToGo)}s`;
+    } else if (secsToGo < 3600) {
+      timeStr = `~${Math.ceil(secsToGo / 60)}m`;
+    } else {
+      timeStr = `~${(secsToGo / 3600).toFixed(1)}h`;
+    }
+
+    targetEl.textContent = `${fmtCur(nextAmount)} · ${timeStr}`;
+  }
+
+  /* =============== Small celebration =============== */
+  function celebrate(amount) {
+    $('#toast-text').textContent = `${t('toast.milestone')} · ${fmtCur(amount)}`;
+    const toast = $('#toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2100);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const stage = $('#toastStage');
+    const count = 14;
+    for (let i = 0; i < count; i++) {
+      const coin = document.createElement('div');
+      coin.className = 'coin';
+      coin.textContent = curSym();
+      coin.style.left = (8 + Math.random() * 84) + '%';
+      coin.style.bottom = (Math.random() * 40) + 'px';
+      coin.style.fontSize = (1.4 + Math.random() * 2.2) + 'rem';
+      coin.style.animationDelay = (Math.random() * 0.45) + 's';
+      stage.appendChild(coin);
+      setTimeout(() => coin.remove(), 3200);
+    }
+  }
+
+  /* =============== BIG money rain =============== */
+  // Total duration: 18 seconds total (bills spawned over ~9s, last bill lands by ~12s,
+  // then 6 more seconds of bigToast dwell with the final Caught total).
+  // V2 interactive mode: clickable bills + real-time caught-amount headline.
+  //
+  // VISIBILITY HANDLING: if the user switches away during a rain, we abort the whole
+  // round. Reasons:
+  //   1) CSS animations get paused on hidden tabs but setTimeout keeps running (throttled).
+  //      When the user returns, bills are still visually on-screen but session.endTime
+  //      has already passed → clicks silently fail. That mismatch is the bug we're fixing.
+  //   2) Rain is a sub-20s celebration — pausing/resuming across long absences makes no UX
+  //      sense. Aborting on hide is the simplest correct behaviour.
+  function moneyRain(amount) {
+    // If another rain is already in flight, cancel it cleanly first
+    if (window.__rainAbort) {
+      try { window.__rainAbort(); } catch (e) {}
+    }
+
+    const stage = $('#rainStage');
+    const vignette = $('#rainVignette');
+    const bigToast = $('#bigToast');
+    const amountEl = $('#bigToastAmount');
+    const labelEl = bigToast.querySelector('.label');
+    const originalLabelText = labelEl ? labelEl.textContent : '';
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Abort flag + cleanup function, registered globally so visibilitychange can fire it
+    let aborted = false;
+    function abortRain(reason) {
+      if (aborted) return;
+      aborted = true;
+      // If this abort was caused by the tab becoming hidden, remember it so we can
+      // show a "rain was canceled" toast when the user comes back.
+      // We persist on window (in-memory) so the flag survives the tab's lifetime
+      // but doesn't leak to other tabs or future sessions.
+      if (reason === 'hidden') {
+        window.__rainCanceledByHide = {
+          at: Date.now(),
+          caughtTotal: window.__rainSession ? window.__rainSession.totalCaught : 0,
+          catchCount: window.__rainSession ? window.__rainSession.catchCount : 0,
+        };
+      }
+      // Stop count-up loop
+      if (window.__rainSession) window.__rainSession.cancelCountUp = true;
+      // Tear down all visible elements immediately
+      vignette.classList.remove('show');
+      bigToast.classList.remove('show', 'slam', 'heartbeat');
+      document.body.classList.remove('rain-active');
+      // Remove every in-flight bill / pop so nothing dangles on the screen
+      stage.querySelectorAll('.bill').forEach(b => b.remove());
+      stage.querySelectorAll('.bill-pop').forEach(p => p.remove());
+      // Restore original label
+      if (labelEl && originalLabelText) labelEl.textContent = originalLabelText;
+      // Detach visibility listener
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      // Clear global handle
+      if (window.__rainAbort === abortRain) window.__rainAbort = null;
+    }
+    function onVisibilityChange() {
+      if (document.hidden) abortRain('hidden');
+    }
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    window.__rainAbort = abortRain;
+
+    // Lock the rest of the UI from being misclicked during the rain
+    // (re-enabled in the 18s cleanup below, or in abortRain)
+    document.body.classList.add('rain-active');
+
+    vignette.classList.add('show');
+
+    // ----- Slam entry on bigToast -----
+    amountEl.textContent = fmtCur(amount);
+    bigToast.classList.remove('heartbeat', 'slam');
+    bigToast.classList.add('show', 'slam');
+    setTimeout(() => {
+      if (aborted) return;
+      bigToast.classList.remove('slam');
+      if (!prefersReduced) bigToast.classList.add('heartbeat');
+    }, 700);
+
+    // ----- Count-up animation on the dollar amount -----
+    if (!prefersReduced) {
+      const countDuration = 1200; // ms
+      const startTime = performance.now();
+      const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+      const animateCount = (now) => {
+        // Stop if user has already caught a bill (showCaughtTotal owns the field now)
+        if (window.__rainSession && window.__rainSession.cancelCountUp) return;
+        const elapsed = now - startTime;
+        const t = Math.min(1, elapsed / countDuration);
+        const current = easeOutCubic(t) * amount;
+        amountEl.textContent = fmtCur(current);
+        if (t < 1) requestAnimationFrame(animateCount);
+        else amountEl.textContent = fmtCur(amount);
+      };
+      requestAnimationFrame(animateCount);
+    }
+
+    // ----- Catch session: tracks player's caught bills for THIS rain -----
+    // Reset on every rain trigger; not persisted, not added to state.earned.
+    const rates = computeRates();
+    const perHour = rates.perHour;
+    // Per-catch reward range: [perHour * 0.5, perHour * 1.5]
+    // Floor to perHour=10 if salary not set, so behaviour stays sane for edge cases.
+    const effectivePerHour = perHour > 0 ? perHour : 10;
+    const minAmt = effectivePerHour * 0.5;
+    const maxAmt = effectivePerHour * 1.5;
+    // Catch window: clicks accepted for the entire visible duration (18s).
+    // Spawn ends at 9s, late-falling bills still tappable until 18s fade.
+    const session = { totalCaught: 0, catchCount: 0, endTime: Date.now() + 18000, switched: false };
+    window.__rainSession = session;
+
+    function randomCatchAmount() {
+      return minAmt + Math.random() * (maxAmt - minAmt);
+    }
+
+    // Switch bigToast from "Money Rain $1000" to "Caught $X" on first catch.
+    // Subsequent catches just update the amount in place (no re-slam thrash).
+    function showCaughtTotal() {
+      const isZh = (state && state.lang === 'zh');
+      if (!session.switched) {
+        // First catch: change label + cancel any in-flight count-up + brief re-slam
+        if (labelEl) labelEl.textContent = isZh ? '已接住' : 'Caught';
+        // Mark count-up as cancelled so it stops overwriting our value
+        session.cancelCountUp = true;
+        // Re-slam for a punchy reveal of the new mode
+        bigToast.classList.remove('heartbeat', 'slam');
+        void bigToast.offsetWidth;
+        bigToast.classList.add('slam');
+        // After slam ends, resume heartbeat
+        setTimeout(() => {
+          bigToast.classList.remove('slam');
+          if (!prefersReduced) bigToast.classList.add('heartbeat');
+        }, 700);
+        session.switched = true;
+      }
+      // Always update amount in real time
+      amountEl.textContent = fmtCur(session.totalCaught);
+    }
+
+    function onBillClick(bill, ev) {
+      if (bill.classList.contains('caught')) return;
+      if (Date.now() >= session.endTime) return; // round already over
+      ev.stopPropagation();
+
+      // Compute the bill's current on-screen position for the pop label
+      const rect = bill.getBoundingClientRect();
+      const stageRect = stage.getBoundingClientRect();
+      const popX = rect.left - stageRect.left + rect.width / 2;
+      const popY = rect.top - stageRect.top + rect.height / 2;
+
+      // Freeze the bill's rotation by reading its current computed transform
+      const styles = getComputedStyle(bill);
+      const matrix = styles.transform;
+      let currentRotDeg = 0;
+      if (matrix && matrix !== 'none' && matrix.startsWith('matrix(')) {
+        const vals = matrix.slice(7, -1).split(',').map(parseFloat);
+        currentRotDeg = Math.atan2(vals[1], vals[0]) * 180 / Math.PI;
+      }
+      bill.style.setProperty('--rNow', currentRotDeg + 'deg');
+
+      // Award a random amount
+      const caught = randomCatchAmount();
+      session.totalCaught += caught;
+      session.catchCount += 1;
+
+      // Mark caught (CSS animation hides it)
+      bill.classList.add('caught');
+
+      // Spawn the floating "+$X.XX" label at the bill's position
+      const pop = document.createElement('div');
+      pop.className = 'bill-pop';
+      pop.textContent = '+' + fmtCur(caught);
+      pop.style.left = popX + 'px';
+      pop.style.top = popY + 'px';
+      stage.appendChild(pop);
+      setTimeout(() => pop.remove(), 1100);
+
+      // bigToast updates in real time on every catch
+      showCaughtTotal();
+    }
+
+    // ----- Falling bills (130 bills, all catchable, with expanded hit area) -----
+    if (!prefersReduced) {
+      const count = 130;
+      const spawnWindow = 9; // seconds
+      for (let i = 0; i < count; i++) {
+        const bill = document.createElement('div');
+        bill.className = 'bill catchable';
+        bill.textContent = curSym();
+        const size = 0.85 + Math.random() * 0.9; // range 0.85–1.75
+        bill.style.width = (60 * size) + 'px';
+        bill.style.height = (28 * size) + 'px';
+        bill.style.fontSize = (1.1 * size) + 'rem';
+        bill.style.left = (Math.random() * 100) + '%';
+        bill.style.top = (-100 - Math.random() * 200) + 'px';
+        const duration = 2.4 + Math.random() * 1.8;
+        const delay = (i / count) * spawnWindow + Math.random() * 0.4;
+        bill.style.setProperty('--r0', (Math.random() * 60 - 30) + 'deg');
+        bill.style.setProperty('--r1', (360 + Math.random() * 720) + 'deg');
+        bill.style.animation = `fallDown ${duration}s linear ${delay}s forwards`;
+        bill.addEventListener('click', (ev) => onBillClick(bill, ev));
+        bill.addEventListener('touchstart', (ev) => { ev.preventDefault(); onBillClick(bill, ev); }, { passive: false });
+        stage.appendChild(bill);
+        setTimeout(() => bill.remove(), (duration + delay) * 1000 + 200);
+      }
+    }
+
+    // ----- Extended dwell: bills spawn for 9s, but bigToast stays until 18s -----
+    // After the rain ends, keep the bigToast (with final Caught total) pulsing for
+    // an additional ~6 seconds so the user can read the result.
+    //
+    // Timeline:
+    //   T=0      slam in, label="Money Rain", count-up to amount
+    //   T=0.7    switch to heartbeat
+    //   T=any    on first catch, label switches to "Caught", amount updates live
+    //   T=12     last bill has landed (no more new bills spawned after T=9)
+    //   T=12-18  heartbeat continues with final Caught total visible
+    //   T=18     fade out, UI re-enabled
+
+    // Final cleanup: fade everything at 18 seconds
+    setTimeout(() => {
+      if (aborted) return; // already cleaned up by abort path
+      vignette.classList.remove('show');
+      bigToast.classList.remove('show', 'slam', 'heartbeat');
+      // Re-enable all UI interactions
+      document.body.classList.remove('rain-active');
+      // Detach the visibility listener now that the round is over
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      if (window.__rainAbort === abortRain) window.__rainAbort = null;
+      // Restore original label after fade-out completes
+      setTimeout(() => {
+        if (labelEl && originalLabelText) labelEl.textContent = originalLabelText;
+      }, 600);
+    }, 18000);
+  }
+
+  /* =============== Clock out =============== */
+  $('#btn-clock-out').addEventListener('click', () => {
+    cancelAnimationFrame(state.rafId);
+
+    const tt = formatTime(state.elapsed);
+    $('#r-time').textContent = `${fmt2(tt.h)}:${fmt2(tt.m)}:${fmt2(tt.s)}`;
+    const totalMin = state.elapsed / 60000;
+    $('#r-time-sub').textContent = totalMin < 1
+      ? `${(state.elapsed / 1000).toFixed(1)} ${state.lang === 'zh' ? '秒' : 'sec'}`
+      : `≈ ${totalMin.toFixed(1)} ${state.lang === 'zh' ? '分钟' : 'min'}`;
+
+    $('#r-cur').textContent = curSym();
+    $('#r-money').textContent = state.earned.toFixed(2);
+    $('#r-milestones').textContent = state.milestones;
+    $('#r-milestones-sub').textContent = `${state.lang === 'zh' ? '每 ' : 'Every '}${fmtCur(state.milestoneStep)}${state.lang === 'zh' ? ' 一次' : ''}`;
+
+    const rt = computeRates();
+    const hrs = state.elapsed / 3600000;
+    const actualHourly = hrs > 0 ? state.earned / hrs : 0;
+    $('#r-hourly').textContent = fmtCur(actualHourly);
+
+    const expectedDaily = rt.perHour * state.hoursPerDay;
+    const pct = expectedDaily > 0 ? Math.min(9999, (state.earned / expectedDaily) * 100) : 0;
+    $('#r-day-pct').textContent = pct.toFixed(1) + '%';
+    $('#r-day-sub').textContent = `${state.lang === 'zh' ? '今日预期 ' : "Today's target "}${fmtCur(expectedDaily)}`;
+
+    $('#status').textContent = t('footer.status.done');
+    state.isPaused = false;
+    document.body.classList.remove('is-paused');
+    showPage('page-result');
+  });
+
+  /* =============== Reset / continue =============== */
+  $('#btn-reset').addEventListener('click', () => {
+    $('#status').textContent = t('footer.status.ready');
+    showPage('page-input');
+  });
+  $('#btn-continue').addEventListener('click', startWork);
+
+  /* =============== Header date/time =============== */
+  function updateDateTime() {
+    const d = new Date();
+    const wd = i18n[state.lang]['weekdays'][d.getDay()];
+    $('#dateTime').textContent = `${wd} · ${fmt2(d.getHours())}:${fmt2(d.getMinutes())}:${fmt2(d.getSeconds())}`;
+  }
+  setInterval(updateDateTime, 1000);
+
+  /* =============== Cookie banner =============== */
+  function maybeShowCookieBanner() {
+    if (!LS.get('pulse_cookie_consent', null)) {
+      setTimeout(() => $('#cookieBanner').classList.add('show'), 600);
+    }
+  }
+  $('#cookie-accept').addEventListener('click', () => {
+    LS.set('pulse_cookie_consent', 'all');
+    $('#cookieBanner').classList.remove('show');
+  });
+  $('#cookie-essential').addEventListener('click', () => {
+    LS.set('pulse_cookie_consent', 'essential');
+    $('#cookieBanner').classList.remove('show');
+  });
+
+  /* =============== Init from localStorage =============== */
+  function initFromStorage() {
+    // Theme
+    document.body.classList.remove('theme-gold','theme-emerald','theme-sapphire','theme-crimson','theme-platinum');
+    document.body.classList.add(state.theme);
+    $$('#theme-swatches .swatch').forEach(s => s.classList.toggle('on', s.getAttribute('data-theme') === state.theme));
+
+    // Pro
+    if (state.isPro) {
+      document.body.classList.add('is-pro');
+      $('#pro-btn').classList.add('active');
+      $('#pro-btn').innerHTML = `<span>✓</span><span>${t('pro.activated')}</span>`;
+    }
+
+    // Inputs
+    if (state.salary === null || state.salary === 0) {
+      $('#in-salary').value = currencies[state.currency].defaultSalary;
+    } else {
+      $('#in-salary').value = state.salary;
+    }
+    $('#in-hours').value = state.hoursPerDay;
+    $('#in-days').value = state.daysPerMonth;
+    $('#in-tax').value = state.taxRate;
+    $('#in-goal').value = state.dailyGoal;
+    $('#in-milestone').value = state.customMilestone;
+  }
+
+  /* =============== Global visibility listener =============== */
+  // When the user returns to the tab, check if a money rain round was canceled
+  // because they switched away. If so, show a brief toast so they understand
+  // what happened (otherwise the rain disappearing feels like a bug). If the
+  // user had already caught some bills, surface what they lost.
+  //
+  // Lifetime: this listener stays attached for the entire page lifetime, independent
+  // of any specific moneyRain() call's own visibilitychange listener (which detaches
+  // itself once a rain ends or aborts).
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) return; // only care about "becoming visible"
+    const flag = window.__rainCanceledByHide;
+    if (!flag) return;
+    // Stale check: ignore if the abort was more than 60 seconds ago.
+    if (Date.now() - flag.at > 60000) {
+      window.__rainCanceledByHide = null;
+      return;
+    }
+    const isZh = (state && state.lang === 'zh');
+    const toastEl = $('#toast');
+    const toastText = $('#toast-text');
+    if (!toastEl || !toastText) return;
+    // If user had caught some bills before switching, mention the lost amount.
+    let msg;
+    if (flag.catchCount > 0) {
+      msg = isZh
+        ? `撒钱已取消（切换离开）· 错过 ${fmtCur(flag.caughtTotal)}`
+        : `Money rain canceled (you switched away) · Lost ${fmtCur(flag.caughtTotal)}`;
+    } else {
+      msg = isZh
+        ? '撒钱已取消（切换离开）'
+        : 'Money rain canceled (you switched away)';
+    }
+    toastText.textContent = msg;
+    toastEl.classList.add('show');
+    setTimeout(() => toastEl.classList.remove('show'), 3500);
+    // Consume the flag so it doesn't fire again
+    window.__rainCanceledByHide = null;
+  });
+
+  /* =============== Creem checkout return handler =============== */
+  // When Creem redirects user back after successful payment, the URL contains:
+  //   ?upgrade=success&checkout_id=ch_xxx&order_id=ord_xxx&customer_id=cust_xxx&product_id=prod_xxx
+  // We detect it on page load, validate basic shape, dedupe by checkout_id,
+  // activate Pro, show a toast, and clean the URL.
+  //
+  // Security model: "trust the redirect" — we DON'T verify signatures server-
+  // side because this is a static site with no backend, and $4.99 doesn't
+  // justify the infrastructure. We do these cheap-but-meaningful checks:
+  //   1. checkout_id must be present and match ch_[alphanumeric]{15+} shape
+  //      → blocks naive ?upgrade=success-only URL probing
+  //   2. each checkout_id can only activate Pro once on this device
+  //      → blocks repeated triggering by refresh / back button
+  //   3. product_id (if Creem includes it) must match our Pulse Pro product
+  //      → blocks redirects from any unrelated Creem product
+  //
+  // What this still doesn't block: copying a real success URL to another
+  // browser/device — that requires backend verification. Acceptable for $4.99.
+  // To add real verification, see verifyCheckoutWithBackend stub below.
+  function maybeActivateProFromReturnUrl() {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('upgrade') !== 'success') return;
+
+    // ---- Basic validation ----
+    const checkoutId = url.searchParams.get('checkout_id');
+    const returnedProductId = url.searchParams.get('product_id');
+
+    // checkout_id must look like a real Creem checkout id
+    if (!checkoutId || !/^ch_[A-Za-z0-9]{15,}$/.test(checkoutId)) {
+      // Silently ignore — don't tip off URL probers, don't break legitimate
+      // users with stale bookmarks
+      return;
+    }
+
+    // If product_id is present, make sure it's OUR product
+    if (returnedProductId && returnedProductId !== CREEM_PRODUCT_ID) {
+      return;
+    }
+
+    // Helper: strip all Creem-added query params from the URL
+    const cleanCreemParams = () => {
+      ['upgrade', 'checkout_id', 'order_id', 'customer_id', 'product_id',
+       'subscription_id', 'request_id', 'signature'].forEach(k => {
+        url.searchParams.delete(k);
+      });
+      const cleanUrl = url.pathname + (url.search || '') + url.hash;
+      window.history.replaceState({}, '', cleanUrl);
+    };
+
+    // Dedupe: each checkout_id activates Pro only once on this device
+    const usedCheckouts = LS.get('pulse_used_checkouts', []);
+    if (usedCheckouts.includes(checkoutId)) {
+      cleanCreemParams();
+      return;
+    }
+    // Mark this checkout_id as used (keep last 50 to bound storage)
+    usedCheckouts.push(checkoutId);
+    if (usedCheckouts.length > 50) usedCheckouts.shift();
+    LS.set('pulse_used_checkouts', usedCheckouts);
+
+    // Activate Pro
+    activatePro();
+    closeAllModals();
+
+    // Show success toast (delayed slightly so i18n + state are ready)
+    setTimeout(() => {
+      const isZh = (state && state.lang === 'zh');
+      const toastEl = $('#toast');
+      const toastText = $('#toast-text');
+      if (toastEl && toastText) {
+        toastText.textContent = isZh
+          ? '🎉 Pulse Pro 已激活 · 感谢您的支持!'
+          : '🎉 Pulse Pro activated · Thank you for your support!';
+        toastEl.classList.add('show');
+        setTimeout(() => toastEl.classList.remove('show'), 5000);
+      }
+    }, 300);
+
+    // Clean the URL so reload doesn't re-trigger and so users don't share
+    // success URLs with sensitive query params
+    cleanCreemParams();
+  }
+
+  /* =============== Init =============== */
+  initFromStorage();
+  renderI18n();
+  renderCurrency();
+  updateDateTime();
+  maybeShowCookieBanner();
+  maybeActivateProFromReturnUrl();
+
+})();
+</script>
+</body>
+</html>
