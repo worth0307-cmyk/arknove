@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://arknove.com/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://arknove.com/" />
@@ -50,9 +50,30 @@
 
   <url>
     <loc>https://arknove.com/blog/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://arknove.com/blog/how-much-is-an-hour-of-your-life-worth.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arknove.com/blog/hidden-costs-that-shrink-your-real-hourly-wage.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://arknove.com/blog/use-your-hourly-rate-to-make-better-decisions.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>

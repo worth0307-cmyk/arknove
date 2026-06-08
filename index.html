@@ -809,9 +809,33 @@
     line-height: 1.65;
   }
   .faq-item.open .faq-a {
-    max-height: 300px;
+    max-height: 600px;
     padding: 0 1.2rem 1rem;
   }
+  .info-prose p {
+    color: var(--text-dim);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .info-prose h3 {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 1.7rem 0 0.6rem;
+  }
+  .info-prose strong { color: var(--text); }
+  .info-prose .prose-links {
+    margin-top: 1.4rem;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+  }
+  .info-prose .prose-links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .info-prose .prose-links a:hover { border-bottom-color: var(--accent); }
 
   /* ========== WORK PAGE ========== */
   .clock-bar {
@@ -2067,7 +2091,47 @@ gtag('config', 'G-VPV3Q2JY9R');
             <span data-i18n="info.faq.title">Frequently asked questions</span>
           </h2>
           <div id="faq-list">
-            <!-- populated by JS for i18n -->
+            <!-- Pre-rendered (English) so the content is crawlable without JS; the script re-renders this for the selected language. -->
+            <div class="faq-item"><div class="faq-q">What is Pulse and what does it do?</div><div class="faq-a">Pulse is a free live salary calculator. You enter three numbers — your monthly take-home pay, the hours you work per day, and the days you work per month — and Pulse converts them into exactly how much you earn per second, per minute, and per hour. When you clock in, a real-time ticker counts your earnings upward, down to the millisecond, so you can literally watch the value of your time accumulate as you work.</div></div>
+            <div class="faq-item"><div class="faq-q">Who is Pulse for?</div><div class="faq-a">Pulse is for anyone who is paid for their time and has never really seen what an hour of that time is worth. Salaried employees use it to make an abstract monthly figure feel concrete. Freelancers and contractors use it to sanity-check their rates. Students and career-changers use it to compare offers. It is equally useful as a motivational tool, a focus aid, and a quiet reminder that your working hours are finite and priced.</div></div>
+            <div class="faq-item"><div class="faq-q">How is my "real" hourly rate different from my salary?</div><div class="faq-a">Most people divide their salary by a rough number of hours and stop there. But your real, effective hourly rate is lower once you account for unpaid overtime, the commute you do not get paid for, taxes, and the money you spend simply because you have a job — transport, work clothes, lunches out, childcare. Pulse shows your gross per-hour rate instantly, and Pulse Pro lets you apply a tax rate to see a closer-to-real after-tax figure. Our blog walks through the full calculation step by step.</div></div>
+            <div class="faq-item"><div class="faq-q">Is Pulse free to use?</div><div class="faq-a">Yes. The core calculator — entering your salary, watching the live ticker, hitting milestones, and seeing your daily results — is completely free, with no signup required. Pulse Pro is an optional one-time upgrade that unlocks visual themes, after-tax mode, daily goal tracking, pause and resume, custom milestones, and removes ads. It is a lifetime purchase, not a subscription.</div></div>
+            <div class="faq-item"><div class="faq-q">How accurate is the calculation?</div><div class="faq-a">The ticker takes your monthly salary, divides it by your total monthly working hours to get an exact per-millisecond rate, then multiplies by the time elapsed since you clocked in. The math is precise to the inputs you provide. It is a projection based on those inputs, not a payroll record — it does not know about bonuses, overtime premiums, or irregular schedules unless you adjust your numbers. For a closer-to-real figure, enable Pro and set your tax rate.</div></div>
+            <div class="faq-item"><div class="faq-q">Can I use Pulse for hourly, freelance, or part-time work?</div><div class="faq-a">Yes. If you are paid hourly, enter a monthly total (or a representative month) along with your typical hours and days, and the per-hour figure will reflect your rate. Freelancers often enter their target monthly income to see whether their day rate actually adds up to the life they want. The tool is flexible because it only cares about three numbers and the relationship between them.</div></div>
+            <div class="faq-item"><div class="faq-q">Does Pulse store or upload my salary information?</div><div class="faq-a">No. Pulse is a fully client-side calculator. Every number you type is saved only in your own browser using localStorage, and nothing is ever transmitted to or stored on a server. We never see your salary. Clearing your browser data resets everything, and using private/incognito mode means nothing is saved at all.</div></div>
+            <div class="faq-item"><div class="faq-q">Why would I want to watch my salary tick up — isn't that stressful?</div><div class="faq-a">For most people it is the opposite of stressful — it is clarifying. Seeing a live number attached to your time tends to make focused work feel rewarding and makes it obvious when your time is being wasted. It is not a guilt machine: rest, recovery, and time with people you love are not "lost earnings." Pulse simply makes a number visible that already exists, and lets you decide what it means to you.</div></div>
+            <div class="faq-item"><div class="faq-q">What are milestones and the "money rain"?</div><div class="faq-a">As your earnings climb, Pulse marks progress with small celebrations called milestones. After larger amounts, a full-screen "money rain" animation plays. They exist to make the act of earning feel tangible and a little joyful, instead of invisible. Free users get a couple of rains per day; Pulse Pro unlocks unlimited celebrations and custom milestone amounts.</div></div>
+            <div class="faq-item"><div class="faq-q">What currencies and languages are supported?</div><div class="faq-a">Pulse currently supports US Dollar (USD) and Chinese Yuan (CNY), and the full interface is available in English and Chinese. The currency follows your language selection automatically, and you can switch at any time from the language menu at the top of the page.</div></div>
+            <div class="faq-item"><div class="faq-q">Does Pulse work on mobile and offline?</div><div class="faq-a">Yes. Pulse is a responsive web app that works in any modern browser on phones, tablets, and computers — there is nothing to install. Because the calculation runs entirely in your browser, it keeps working even with a flaky connection once the page has loaded.</div></div>
+            <div class="faq-item"><div class="faq-q">How do I get Pulse Pro?</div><div class="faq-a">Click the PRO button at the top of the page. The one-time payment unlocks every Pro feature for life. There is no subscription and no recurring charge.</div></div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <h2 class="info-block-title">
+            <span class="num">03</span>
+            <span data-i18n="guide.title">Understanding what your time is worth</span>
+          </h2>
+          <div class="info-prose">
+            <p data-i18n="guide.p1">Almost everyone who works for a living can recite their salary, yet almost no one can tell you what a single hour of their work is actually worth. We are paid in monthly or annual lump sums that arrive long after the hours that earned them, so the connection between the time we spend and the money we receive quietly disappears. Pulse was built to close that gap — to take the one number you already know, your pay, and turn it back into the unit you actually live in: time.</p>
+            <p data-i18n="guide.p2">The idea behind the tool is simple. If you earn a fixed monthly salary and you know roughly how many hours you work, then every second you are on the clock has a precise, calculable value. Divide your monthly pay by the number of hours you work in a month, divide again by 3,600, and you have your earnings per second. Pulse does this instantly and then animates it, so instead of an abstract figure on a contract you see a living number climbing in front of you while you work.</p>
+
+            <h3 data-i18n="guide.h1">Why a live number changes how you feel about work</h3>
+            <p data-i18n="guide.p3">Behavioral researchers have long noticed that people undervalue things they cannot see. We waste what is invisible and protect what is measured. When the cost of an hour is hidden inside a once-a-month paycheck, it is easy to give that hour away to a pointless meeting, an hour of doom-scrolling, or unpaid overtime without ever registering the trade. The moment the same hour carries a visible, ticking price, the trade becomes real. Most people report that watching the number does not make them anxious — it makes them deliberate.</p>
+            <p data-i18n="guide.p4">That clarity cuts both ways, and that is the point. Seeing your rate can make you guard your working hours more fiercely, but it can also free you: once you know that an hour of your time is worth a specific amount, you can decide, rationally, when it is worth paying someone else to do a task, when an extra hour of work is not worth the trade, and when rest is the most valuable thing you can buy with your time.</p>
+
+            <h3 data-i18n="guide.h2">From gross pay to your real hourly rate</h3>
+            <p data-i18n="guide.p5">The headline figure Pulse shows is your gross rate — your pay before anything is taken out. Your real, take-home value per hour is lower, and it is worth knowing by how much. Income tax and mandatory contributions reduce it first. Then there are the costs you only carry because you have a job at all: the unpaid commute, transport, work clothes, lunches bought rather than made, and the time you are technically off the clock but mentally still at work. Add the hours back and subtract the money, and your effective hourly rate can be meaningfully lower than the simple salary-divided-by-hours number suggests.</p>
+            <p data-i18n="guide.p6">None of this is meant to be discouraging. Knowing your true rate is what lets you make good decisions: whether a higher-paying job with a longer commute is actually a raise, whether a side project pays enough per hour to be worth your evenings, or whether the convenience purchase you feel guilty about is, in hourly terms, an obvious bargain. Pulse Pro adds an after-tax mode so you can fold your own tax rate into the live number and watch the figure that actually lands in your account.</p>
+            <p data-i18n="guide.p7">Pulse is, in the end, a deliberately modest tool. It does not track you, it does not store your salary on any server, and it will not tell you how to live. It simply makes one true number visible and lets you sit with it. If you want to go deeper into the ideas and the math, the essays below work through the real cost of your time, how to calculate your genuine hourly rate, and what tends to change once you start paying attention.</p>
+
+            <div class="prose-links">
+              <strong data-i18n="guide.readmore">Read more on the blog:</strong>
+              <a href="/blog/the-real-cost-of-your-time.html">The Real Cost of Your Time</a> ·
+              <a href="/blog/calculate-true-hourly-rate.html">Calculate Your True Hourly Rate</a> ·
+              <a href="/blog/how-much-is-an-hour-of-your-life-worth.html">How Much Is an Hour of Your Life Worth?</a> ·
+              <a href="/blog/">All essays →</a>
+            </div>
           </div>
         </div>
       </section>
@@ -2484,13 +2548,32 @@ gtag('config', 'G-VPV3Q2JY9R');
       'info.step4.t': 'Clock out and review',
       'info.step4.d': 'When your day ends, clock out to see your total earnings, total time worked, milestones hit, and your effective hourly rate for this session.',
       'faq': [
-        ['Is Pulse free to use?', 'Yes. The core calculator — entering your salary, watching the live ticker, hitting milestones, and seeing daily results — is completely free. Pulse Pro is an optional one-time {PRICE} upgrade that unlocks themes, tax mode, daily goals, pause, custom milestones, and removes ads.'],
-        ['How accurate is the calculation?', 'The ticker uses your inputs (monthly salary ÷ monthly hours) to compute a per-millisecond rate, then multiplies by elapsed time. It is mathematically exact. For real take-home, enable Pro and set your tax rate.'],
-        ['Does Pulse store my salary information?', 'Your inputs are saved only in your own browser using localStorage. Nothing is sent to a server. Clearing your browser data will reset everything.'],
-        ['What currencies are supported?', 'Currently US Dollar (USD) and Chinese Yuan (CNY). The currency follows your language selection.'],
-        ['What happens if I close the tab while working?', 'The session ends. Pulse is designed for a single continuous work session — clock in when you start, clock out when you finish.'],
-        ['How do I get Pulse Pro?', 'Click the PRO button at the top of the page. The {PRICE} payment is a one-time fee with lifetime access. No subscription.']
+        ['What is Pulse and what does it do?', 'Pulse is a free live salary calculator. You enter three numbers — your monthly take-home pay, the hours you work per day, and the days you work per month — and Pulse converts them into exactly how much you earn per second, per minute, and per hour. When you clock in, a real-time ticker counts your earnings upward, down to the millisecond, so you can literally watch the value of your time accumulate as you work.'],
+        ['Who is Pulse for?', 'Pulse is for anyone who is paid for their time and has never really seen what an hour of that time is worth. Salaried employees use it to make an abstract monthly figure feel concrete. Freelancers and contractors use it to sanity-check their rates. Students and career-changers use it to compare offers. It is equally useful as a motivational tool, a focus aid, and a quiet reminder that your working hours are finite and priced.'],
+        ['How is my "real" hourly rate different from my salary?', 'Most people divide their salary by a rough number of hours and stop there. But your real, effective hourly rate is lower once you account for unpaid overtime, the commute you do not get paid for, taxes, and the money you spend simply because you have a job — transport, work clothes, lunches out, childcare. Pulse shows your gross per-hour rate instantly, and Pulse Pro lets you apply a tax rate to see a closer-to-real after-tax figure. Our blog walks through the full calculation step by step.'],
+        ['Is Pulse free to use?', 'Yes. The core calculator — entering your salary, watching the live ticker, hitting milestones, and seeing your daily results — is completely free, with no signup required. Pulse Pro is an optional one-time {PRICE} upgrade that unlocks visual themes, after-tax mode, daily goal tracking, pause and resume, custom milestones, and removes ads. It is a lifetime purchase, not a subscription.'],
+        ['How accurate is the calculation?', 'The ticker takes your monthly salary, divides it by your total monthly working hours to get an exact per-millisecond rate, then multiplies by the time elapsed since you clocked in. The math is precise to the inputs you provide. It is a projection based on those inputs, not a payroll record — it does not know about bonuses, overtime premiums, or irregular schedules unless you adjust your numbers. For a closer-to-real figure, enable Pro and set your tax rate.'],
+        ['Can I use Pulse for hourly, freelance, or part-time work?', 'Yes. If you are paid hourly, enter a monthly total (or a representative month) along with your typical hours and days, and the per-hour figure will reflect your rate. Freelancers often enter their target monthly income to see whether their day rate actually adds up to the life they want. The tool is flexible because it only cares about three numbers and the relationship between them.'],
+        ['Does Pulse store or upload my salary information?', 'No. Pulse is a fully client-side calculator. Every number you type is saved only in your own browser using localStorage, and nothing is ever transmitted to or stored on a server. We never see your salary. Clearing your browser data resets everything, and using private/incognito mode means nothing is saved at all.'],
+        ['Why would I want to watch my salary tick up — isn\'t that stressful?', 'For most people it is the opposite of stressful — it is clarifying. Seeing a live number attached to your time tends to make focused work feel rewarding and makes it obvious when your time is being wasted. It is not a guilt machine: rest, recovery, and time with people you love are not "lost earnings." Pulse simply makes a number visible that already exists, and lets you decide what it means to you.'],
+        ['What are milestones and the "money rain"?', 'As your earnings climb, Pulse marks progress with small celebrations called milestones. After larger amounts, a full-screen "money rain" animation plays. They exist to make the act of earning feel tangible and a little joyful, instead of invisible. Free users get a couple of rains per day; Pulse Pro unlocks unlimited celebrations and custom milestone amounts.'],
+        ['What currencies and languages are supported?', 'Pulse currently supports US Dollar (USD) and Chinese Yuan (CNY), and the full interface is available in English and Chinese. The currency follows your language selection automatically, and you can switch at any time from the language menu at the top of the page.'],
+        ['Does Pulse work on mobile and offline?', 'Yes. Pulse is a responsive web app that works in any modern browser on phones, tablets, and computers — there is nothing to install. Because the calculation runs entirely in your browser, it keeps working even with a flaky connection once the page has loaded.'],
+        ['How do I get Pulse Pro?', 'Click the PRO button at the top of the page. The {PRICE} payment is a one-time fee that unlocks every Pro feature for life. There is no subscription and no recurring charge.']
       ],
+
+      // Guide / long-form content
+      'guide.title': 'Understanding what your time is worth',
+      'guide.p1': 'Almost everyone who works for a living can recite their salary, yet almost no one can tell you what a single hour of their work is actually worth. We are paid in monthly or annual lump sums that arrive long after the hours that earned them, so the connection between the time we spend and the money we receive quietly disappears. Pulse was built to close that gap — to take the one number you already know, your pay, and turn it back into the unit you actually live in: time.',
+      'guide.p2': 'The idea behind the tool is simple. If you earn a fixed monthly salary and you know roughly how many hours you work, then every second you are on the clock has a precise, calculable value. Divide your monthly pay by the number of hours you work in a month, divide again by 3,600, and you have your earnings per second. Pulse does this instantly and then animates it, so instead of an abstract figure on a contract you see a living number climbing in front of you while you work.',
+      'guide.h1': 'Why a live number changes how you feel about work',
+      'guide.p3': 'Behavioral researchers have long noticed that people undervalue things they cannot see. We waste what is invisible and protect what is measured. When the cost of an hour is hidden inside a once-a-month paycheck, it is easy to give that hour away to a pointless meeting, an hour of doom-scrolling, or unpaid overtime without ever registering the trade. The moment the same hour carries a visible, ticking price, the trade becomes real. Most people report that watching the number does not make them anxious — it makes them deliberate.',
+      'guide.p4': 'That clarity cuts both ways, and that is the point. Seeing your rate can make you guard your working hours more fiercely, but it can also free you: once you know that an hour of your time is worth a specific amount, you can decide, rationally, when it is worth paying someone else to do a task, when an extra hour of work is not worth the trade, and when rest is the most valuable thing you can buy with your time.',
+      'guide.h2': 'From gross pay to your real hourly rate',
+      'guide.p5': 'The headline figure Pulse shows is your gross rate — your pay before anything is taken out. Your real, take-home value per hour is lower, and it is worth knowing by how much. Income tax and mandatory contributions reduce it first. Then there are the costs you only carry because you have a job at all: the unpaid commute, transport, work clothes, lunches bought rather than made, and the time you are technically off the clock but mentally still at work. Add the hours back and subtract the money, and your effective hourly rate can be meaningfully lower than the simple salary-divided-by-hours number suggests.',
+      'guide.p6': 'None of this is meant to be discouraging. Knowing your true rate is what lets you make good decisions: whether a higher-paying job with a longer commute is actually a raise, whether a side project pays enough per hour to be worth your evenings, or whether the convenience purchase you feel guilty about is, in hourly terms, an obvious bargain. Pulse Pro adds an after-tax mode so you can fold your own tax rate into the live number and watch the figure that actually lands in your account.',
+      'guide.p7': 'Pulse is, in the end, a deliberately modest tool. It does not track you, it does not store your salary on any server, and it will not tell you how to live. It simply makes one true number visible and lets you sit with it. If you want to go deeper into the ideas and the math, the essays below work through the real cost of your time, how to calculate your genuine hourly rate, and what tends to change once you start paying attention.',
+      'guide.readmore': 'Read more on the blog:',
 
       // Cookie
       'cookie.text': 'We use cookies to improve your experience and to serve personalized ads via Google AdSense. See our <a data-modal="privacy">Privacy Policy</a> for details.',
@@ -2723,13 +2806,32 @@ gtag('config', 'G-VPV3Q2JY9R');
       'info.step4.t': '下班结算',
       'info.step4.d': '下班时点「结束」,看到今日总收入、总工时、里程碑数、实际时薪。',
       'faq': [
-        ['Pulse 完全免费吗?', '是的。核心功能——输入薪资、看实时计数、达成里程碑、查看战报——全部免费。Pulse Pro 是可选的一次性 {PRICE} 升级,解锁主题、税后模式、每日目标、暂停、自定义里程碑,并去除广告。'],
-        ['计算精度如何?', '采用「月薪 ÷ 月工时」算出毫秒薪,然后乘以经过时间,数学上完全精确。如需看真实税后,升级 Pro 并设置税率即可。'],
-        ['Pulse 会存储我的薪资信息吗?', '不会。所有输入只保存在你自己浏览器的 localStorage 里,不上传任何服务器。清除浏览器数据即重置。'],
-        ['支持哪些币种?', '目前支持美元 (USD) 和人民币 (CNY)。币种跟随语言自动切换。'],
-        ['工作中关闭标签页会怎样?', '本次会话会结束。Pulse 设计为一次连续会话——上班开始,下班结束。'],
-        ['怎么购买 Pulse Pro?', '点击顶部 PRO 按钮即可。{PRICE} 一次买断,终身使用,无订阅。']
+        ['Pulse 是什么,能做什么?', 'Pulse 是一个免费的实时薪资计算器。你只需输入三个数字——每月到手薪资、每天工作小时数、每月工作天数——Pulse 就会算出你每秒、每分钟、每小时究竟赚多少。点击「开始计时」后,一个毫秒级的实时计数器会不断向上跳动,让你亲眼看着自己时间的价值随工作一点点累积起来。'],
+        ['Pulse 适合谁用?', 'Pulse 适合每一个用时间换钱、却从没真正看清一小时值多少的人。上班族用它把抽象的月薪变得具体可感;自由职业者和接单者用它检验自己的报价是否合理;学生和转行者用它对比不同 offer。它既是激励工具,也是专注助手,更是一个安静的提醒:你的工作时间有限,而且明码标价。'],
+        ['「真实」时薪和我的工资有什么不同?', '大多数人只是把工资粗略除以工时就完事了。但你真正的有效时薪其实更低——因为要算上没报酬的加班、不计薪的通勤、税款,以及仅仅因为有这份工作而产生的开销:交通、工作服、外食午餐、托育等。Pulse 会立刻显示你的税前时薪,Pulse Pro 还能套用税率,给出更接近真实的税后数字。我们的博客有一步步的完整算法。'],
+        ['Pulse 完全免费吗?', '是的。核心功能——输入薪资、看实时计数、达成里程碑、查看每日战报——全部免费,且无需注册。Pulse Pro 是可选的一次性 {PRICE} 升级,解锁视觉主题、税后模式、每日目标、暂停/继续、自定义里程碑,并去除广告。它是终身买断,不是订阅。'],
+        ['计算精度如何?', '计数器用「月薪 ÷ 当月总工时」算出精确的毫秒薪,再乘以你开始计时后经过的时间。结果在你提供的输入范围内是精确的。它是基于这些输入的推算,不是工资单——除非你自己调整数字,否则它不会知道奖金、加班费或不规律的排班。想看更接近真实的数字,可升级 Pro 并设置税率。'],
+        ['可以用于小时工、自由职业或兼职吗?', '可以。如果你按小时计酬,输入一个月总额(或一个有代表性的月份)以及你的典型工时和天数,时薪就会反映你的费率。自由职业者常输入目标月收入,看看自己的日薪是否真能支撑想要的生活。这个工具很灵活,因为它只关心三个数字以及它们之间的关系。'],
+        ['Pulse 会存储或上传我的薪资信息吗?', '不会。Pulse 是完全在浏览器端运行的计算器。你输入的每个数字只保存在你自己浏览器的 localStorage 里,绝不上传或存储到任何服务器,我们看不到你的薪资。清除浏览器数据即可重置;使用无痕模式则什么都不会保存。'],
+        ['盯着工资往上跳——这不会让人焦虑吗?', '对大多数人来说恰恰相反,它带来的是清晰感。给时间标上一个实时数字,会让专注工作变得有成就感,也会让「时间被白白浪费」变得一目了然。它不是用来制造愧疚的:休息、恢复、和所爱之人相处的时间,都不是「损失的收入」。Pulse 只是把一个本就存在的数字显示出来,由你决定它对你意味着什么。'],
+        ['里程碑和「撒钱」特效是什么?', '随着收入上涨,Pulse 会用一个个小庆祝(里程碑)标记进度;达到更大金额时,还会播放全屏「撒钱」动画。它们的意义是让「赚钱」这件事变得可感、甚至有点快乐,而不是悄无声息。免费用户每天有几次撒钱;Pulse Pro 解锁无限次庆祝和自定义里程碑金额。'],
+        ['支持哪些币种和语言?', 'Pulse 目前支持美元 (USD) 和人民币 (CNY),界面提供完整的中英文。币种会跟随语言自动切换,你也可以随时从页面顶部的语言菜单更改。'],
+        ['Pulse 支持手机和离线使用吗?', '支持。Pulse 是响应式网页应用,可在手机、平板和电脑的任意现代浏览器中使用,无需安装。由于计算完全在浏览器内完成,页面加载后即使网络不稳定也能继续工作。'],
+        ['怎么购买 Pulse Pro?', '点击页面顶部的 PRO 按钮即可。{PRICE} 一次性付费即可终身解锁全部 Pro 功能,无订阅、无任何周期性扣费。']
       ],
+
+      // Guide / 长文内容
+      'guide.title': '看懂你的时间到底值多少',
+      'guide.p1': '几乎每个靠工作谋生的人都能脱口说出自己的薪水,却几乎没人说得清自己一小时的劳动究竟值多少。我们的报酬以月或年为单位、在赚到它的那些工时之后很久才到账,于是「付出的时间」和「拿到的钱」之间的联系悄悄消失了。Pulse 正是为弥合这道裂缝而生——把你早已知道的那个数字(薪水),换算回你真正在其中生活的单位:时间。',
+      'guide.p2': '工具背后的想法很简单。如果你拿固定月薪,又大致知道自己工作多少小时,那么你在岗的每一秒都有一个精确、可计算的价值。用月薪除以当月工时,再除以 3600,就得到每秒收入。Pulse 瞬间完成这步计算,并让它动起来——于是合同上那个抽象的数字,变成了你工作时眼前不断攀升的活数字。',
+      'guide.h1': '一个实时数字,为何能改变你对工作的感受',
+      'guide.p3': '行为学研究早已发现:人会低估看不见的东西。看不见的我们随意挥霍,被计量的我们才会珍惜。当一小时的成本被藏进一月一次的工资里,我们很容易把这一小时拱手让给一场毫无意义的会议、一小时的刷手机或无偿加班,却毫无察觉这是一笔交易。而当同样的一小时带着一个可见、跳动的价格,这笔交易就变得真实了。大多数人反馈,盯着这个数字看并不会焦虑,反而让自己做事更有取舍。',
+      'guide.p4': '这种清晰是双向的,而这正是关键所在。看清自己的时薪,可能让你更坚定地守护工作时间,但它同样能让你释然:一旦知道你的一小时值多少钱,你就能理性地判断——什么时候该花钱请别人代劳,什么时候多干一小时并不划算,以及什么时候,休息才是你能用时间买到的最有价值的东西。',
+      'guide.h2': '从税前工资到你真正的时薪',
+      'guide.p5': 'Pulse 显示的醒目数字是税前时薪——也就是扣除任何项目之前的报酬。你真正到手的每小时价值更低,而搞清楚低多少很有意义。首先是个税和强制性缴费;其次是那些仅仅因为你有这份工作才产生的成本:不计薪的通勤、交通费、工作服、买而非自带的午餐,以及你名义上已下班、心里却仍在工作的时间。把这些时间加回去、把这些钱减出来,你的有效时薪可能远低于「薪水除以工时」的简单结果。',
+      'guide.p6': '这一切并非要让人泄气。知道真实时薪,正是为了做出更好的决定:一份薪水更高但通勤更久的工作究竟算不算涨薪;一个副业按小时算是否值得你的夜晚;以及那笔你心怀愧疚的便利消费,换算成时薪后是不是其实相当划算。Pulse Pro 增加了税后模式,让你把自己的税率折算进实时数字,直接看着真正进账的金额。',
+      'guide.p7': '归根结底,Pulse 是一个刻意保持克制的工具。它不追踪你,不在任何服务器上存储你的薪资,也不会教你该怎样生活。它只是把一个真实的数字呈现出来,让你与它静静相处。若想更深入地了解背后的理念与算法,下面的文章梳理了你时间的真实成本、如何计算你真正的时薪,以及当你开始留意之后,通常会发生哪些改变。',
+      'guide.readmore': '更多博客文章:',
 
       'cookie.text': '我们使用 Cookie 来改善你的体验,并通过 Google AdSense 提供个性化广告。详见 <a data-modal="privacy">隐私政策</a>。',
       'cookie.accept': '全部接受',
