@@ -1911,6 +1911,16 @@ gtag('config', 'G-VPV3Q2JY9R');
 (function () {
   try {
     var url = new URL(window.location.href);
+    // Honor ?lang=en|zh (used by the standalone .zh.html pages when linking
+    // back to the app) before we strip it, so navigating from a Chinese page
+    // keeps the app in Chinese. Persisted in the same JSON format LS.get reads.
+    var urlLang = url.searchParams.get('lang');
+    if (urlLang === 'en' || urlLang === 'zh') {
+      try {
+        localStorage.setItem('pulse_lang', JSON.stringify(urlLang));
+        localStorage.setItem('pulse_currency', JSON.stringify(urlLang === 'zh' ? 'CNY' : 'USD'));
+      } catch (e) { /* ignore */ }
+    }
     var paramsToStrip = ['lang', 'ref', 'fbclid', 'gclid', 'msclkid',
                          'utm_source', 'utm_medium', 'utm_campaign',
                          'utm_term', 'utm_content'];
@@ -3070,6 +3080,13 @@ gtag('config', 'G-VPV3Q2JY9R');
         if (key === 'cookie.text') el.innerHTML = val;
         else el.textContent = val;
       }
+    });
+
+    // Point footer links at the matching-language standalone pages.
+    const footerPageMap = { 'footer.about': 'about', 'footer.privacy': 'privacy', 'footer.terms': 'terms', 'footer.contact': 'contact' };
+    Object.keys(footerPageMap).forEach(key => {
+      const a = document.querySelector(`.footer-links a[data-i18n="${key}"]`);
+      if (a) a.setAttribute('href', state.lang === 'zh' ? `/${footerPageMap[key]}.zh.html` : `/${footerPageMap[key]}.html`);
     });
 
     $('#page1-title').innerHTML = `${t('page1.title1')}<br><span class="em">${t('page1.title2')}</span>`;
