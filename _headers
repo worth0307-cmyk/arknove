@@ -1,0 +1,49 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/about.html
+  Link: <https://arknove.com/about.html>; rel="canonical"
+
+/about.zh.html
+  Link: <https://arknove.com/about.zh.html>; rel="canonical"
+
+/contact.html
+  Link: <https://arknove.com/contact.html>; rel="canonical"
+
+/contact.zh.html
+  Link: <https://arknove.com/contact.zh.html>; rel="canonical"
+
+/privacy.html
+  Link: <https://arknove.com/privacy.html>; rel="canonical"
+
+/privacy.zh.html
+  Link: <https://arknove.com/privacy.zh.html>; rel="canonical"
+
+/terms.html
+  Link: <https://arknove.com/terms.html>; rel="canonical"
+
+/terms.zh.html
+  Link: <https://arknove.com/terms.zh.html>; rel="canonical"
+
+/blog/
+  Link: <https://arknove.com/blog/>; rel="canonical"
+
+/blog/how-much-is-an-hour-of-your-life-worth.html
+  Link: <https://arknove.com/blog/how-much-is-an-hour-of-your-life-worth.html>; rel="canonical"
+
+/blog/hidden-costs-that-shrink-your-real-hourly-wage.html
+  Link: <https://arknove.com/blog/hidden-costs-that-shrink-your-real-hourly-wage.html>; rel="canonical"
+
+/blog/use-your-hourly-rate-to-make-better-decisions.html
+  Link: <https://arknove.com/blog/use-your-hourly-rate-to-make-better-decisions.html>; rel="canonical"
+
+/blog/the-real-cost-of-your-time.html
+  Link: <https://arknove.com/blog/the-real-cost-of-your-time.html>; rel="canonical"
+
+/blog/calculate-true-hourly-rate.html
+  Link: <https://arknove.com/blog/calculate-true-hourly-rate.html>; rel="canonical"
+
+/blog/psychology-of-watching-money-tick.html
+  Link: <https://arknove.com/blog/psychology-of-watching-money-tick.html>; rel="canonical"

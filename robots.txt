@@ -5,10 +5,6 @@
 User-agent: *
 Allow: /
 
-# Block crawlers from non-content paths
-Disallow: /api/
-Disallow: /admin/
-
 # AI training bot policy (opt-out, common practice for indie sites)
 User-agent: GPTBot
 Disallow: /

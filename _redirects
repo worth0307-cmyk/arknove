@@ -1,0 +1,6 @@
+# Cloudflare Pages redirect rules
+# Enforce canonical .html URLs — prevent Cloudflare from serving clean URLs
+# that conflict with the canonical tags declared in each HTML file.
+
+# Ensure www always redirects to apex (in case Cloudflare doesn't handle this)
+https://www.arknove.com/* https://arknove.com/:splat 301
