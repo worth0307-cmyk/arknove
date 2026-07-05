@@ -2137,9 +2137,9 @@ gtag('config', 'G-VPV3Q2JY9R');
 
             <div class="prose-links">
               <strong data-i18n="guide.readmore">Read more on the blog:</strong>
-              <a href="/blog/the-real-cost-of-your-time.html">The Real Cost of Your Time</a> ·
-              <a href="/blog/calculate-true-hourly-rate.html">Calculate Your True Hourly Rate</a> ·
-              <a href="/blog/how-much-is-an-hour-of-your-life-worth.html">How Much Is an Hour of Your Life Worth?</a> ·
+              <a href="/blog/the-real-cost-of-your-time">The Real Cost of Your Time</a> ·
+              <a href="/blog/calculate-true-hourly-rate">Calculate Your True Hourly Rate</a> ·
+              <a href="/blog/how-much-is-an-hour-of-your-life-worth">How Much Is an Hour of Your Life Worth?</a> ·
               <a href="/blog/">All essays →</a>
             </div>
           </div>
@@ -2304,10 +2304,10 @@ gtag('config', 'G-VPV3Q2JY9R');
     <span><span class="dot"></span><span data-i18n="footer.tagline">EST. 2026 · TIME IS MONEY</span></span>
     <span class="footer-links">
       <a href="/blog/" data-i18n="footer.blog">Blog</a>
-      <a href="/about.html" data-i18n="footer.about">About</a>
-      <a href="/privacy.html" data-i18n="footer.privacy">Privacy</a>
-      <a href="/terms.html" data-i18n="footer.terms">Terms</a>
-      <a href="/contact.html" data-i18n="footer.contact">Contact</a>
+      <a href="/about" data-i18n="footer.about">About</a>
+      <a href="/privacy" data-i18n="footer.privacy">Privacy</a>
+      <a href="/terms" data-i18n="footer.terms">Terms</a>
+      <a href="/contact" data-i18n="footer.contact">Contact</a>
       <a href="mailto:support@arknove.com">support@arknove.com</a>
       <span id="status">READY</span>
     </span>
@@ -3086,7 +3086,7 @@ gtag('config', 'G-VPV3Q2JY9R');
     const footerPageMap = { 'footer.about': 'about', 'footer.privacy': 'privacy', 'footer.terms': 'terms', 'footer.contact': 'contact' };
     Object.keys(footerPageMap).forEach(key => {
       const a = document.querySelector(`.footer-links a[data-i18n="${key}"]`);
-      if (a) a.setAttribute('href', state.lang === 'zh' ? `/${footerPageMap[key]}.zh.html` : `/${footerPageMap[key]}.html`);
+      if (a) a.setAttribute('href', state.lang === 'zh' ? `/${footerPageMap[key]}.zh` : `/${footerPageMap[key]}`);
     });
 
     $('#page1-title').innerHTML = `${t('page1.title1')}<br><span class="em">${t('page1.title2')}</span>`;
