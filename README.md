@@ -17,8 +17,19 @@ A free live salary calculator that watches your earnings tick up second by secon
 ├── ads.txt                 # Google AdSense
 ├── robots.txt
 ├── sitemap.xml
+├── _redirects              # 旧 .html 地址 301 跳转 / Legacy .html redirects
 └── og-image.png            # 社交分享图 / Open Graph image
 ```
+
+## 网址规范 / URL convention
+
+站点对外一律使用**无后缀**网址(`/privacy`、`/about.zh`),而非 `/privacy.html`。
+canonical、hreflang、sitemap 和站内链接都必须使用这一形式。`_redirects` 把所有旧
+`.html` 地址显式 301 到对应的无后缀地址。
+
+Canonical URLs are **extensionless** (`/privacy`, `/about.zh`). Every canonical
+tag, hreflang annotation, sitemap entry, and internal link must use that form;
+`_redirects` maps the legacy `.html` paths onto them with explicit 301s.
 
 ## 部署 / Deployment
 
