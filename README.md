@@ -26,18 +26,27 @@ A free live salary calculator that watches your earnings tick up second by secon
 canonical、hreflang、sitemap 和站内链接都必须使用这一形式。
 
 跳转由 Cloudflare Pages 内置处理:`/privacy` 由磁盘上的 `privacy.html` 提供服务,
-而 `/privacy.html` 会 301 跳转到 `/privacy`。**不要为此添加 `_redirects` 文件**——
-本项目试过,Cloudflare 未将其识别为配置,反而把它当普通文本文件对外提供,凭空多出
-一个可被抓取的 URL。内置行为已经是正确的单跳 301。
+而 `/privacy.html` 会 **308** 单跳到 `/privacy`。Google 对 308 和 301 的处理完全
+一致,无需干预。
+
+本项目曾加过 `_redirects` 想把这些跳转显式声明为 301。它**确实生效**——状态码从内置
+的 308 变为 301,加回和删除时可稳定复现。但 308 已经正确,改成 301 没有任何收益,而
+`/_redirects` 本身返回 200(可被抓取),所以已移除。若日后要加,先想清楚要解决什么
+问题:仅仅为了把 308 换成 301 是不值得的。
 
 Canonical URLs are **extensionless** (`/privacy`, `/about.zh`). Every canonical
 tag, hreflang annotation, sitemap entry, and internal link must use that form.
 
 Redirects are handled by Cloudflare Pages itself: `/privacy` is served from
-`privacy.html` on disk, and `/privacy.html` 301s to `/privacy`. **Do not add a
-`_redirects` file for this** — it was tried here and Cloudflare served it as a
-plain text file instead of consuming it as config, exposing a crawlable URL.
-The built-in behavior already produces the correct single-hop 301.
+`privacy.html` on disk, and `/privacy.html` makes a single **308** hop to
+`/privacy`. Google treats 308 and 301 identically, so nothing needs doing.
+
+A `_redirects` file was tried here to declare those hops explicitly as 301s.
+It **did take effect** — the status code went from the built-in 308 to 301,
+reproducibly, on adding and removing it. But 308 was already correct, so the
+change bought nothing, and `/_redirects` itself returned 200 (crawlable), so
+it was removed. If you reach for one again, be clear what it is solving:
+turning a 308 into a 301 is not worth it.
 
 ## 部署 / Deployment
 
