@@ -17,19 +17,27 @@ A free live salary calculator that watches your earnings tick up second by secon
 ├── ads.txt                 # Google AdSense
 ├── robots.txt
 ├── sitemap.xml
-├── _redirects              # 旧 .html 地址 301 跳转 / Legacy .html redirects
 └── og-image.png            # 社交分享图 / Open Graph image
 ```
 
 ## 网址规范 / URL convention
 
 站点对外一律使用**无后缀**网址(`/privacy`、`/about.zh`),而非 `/privacy.html`。
-canonical、hreflang、sitemap 和站内链接都必须使用这一形式。`_redirects` 把所有旧
-`.html` 地址显式 301 到对应的无后缀地址。
+canonical、hreflang、sitemap 和站内链接都必须使用这一形式。
+
+跳转由 Cloudflare Pages 内置处理:`/privacy` 由磁盘上的 `privacy.html` 提供服务,
+而 `/privacy.html` 会 301 跳转到 `/privacy`。**不要为此添加 `_redirects` 文件**——
+本项目试过,Cloudflare 未将其识别为配置,反而把它当普通文本文件对外提供,凭空多出
+一个可被抓取的 URL。内置行为已经是正确的单跳 301。
 
 Canonical URLs are **extensionless** (`/privacy`, `/about.zh`). Every canonical
-tag, hreflang annotation, sitemap entry, and internal link must use that form;
-`_redirects` maps the legacy `.html` paths onto them with explicit 301s.
+tag, hreflang annotation, sitemap entry, and internal link must use that form.
+
+Redirects are handled by Cloudflare Pages itself: `/privacy` is served from
+`privacy.html` on disk, and `/privacy.html` 301s to `/privacy`. **Do not add a
+`_redirects` file for this** — it was tried here and Cloudflare served it as a
+plain text file instead of consuming it as config, exposing a crawlable URL.
+The built-in behavior already produces the correct single-hop 301.
 
 ## 部署 / Deployment
 
