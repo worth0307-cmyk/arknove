@@ -1,0 +1,11 @@
+# 已合并文章 -> 承接文章(301)
+# 这三篇的内容已并入目标文章,URL 不再对应任何文件。
+# 必须显式 301,否则会 404 并丢掉已累积的索引信号 —— Cloudflare
+# 内置跳转只负责 .html 去后缀,不覆盖页面被删除的情况。
+
+/blog/how-much-is-an-hour-of-your-life-worth               /blog/calculate-true-hourly-rate                           301
+/blog/how-much-is-an-hour-of-your-life-worth.html          /blog/calculate-true-hourly-rate                           301
+/blog/hidden-costs-that-shrink-your-real-hourly-wage       /blog/calculate-true-hourly-rate                           301
+/blog/hidden-costs-that-shrink-your-real-hourly-wage.html  /blog/calculate-true-hourly-rate                           301
+/blog/the-real-cost-of-your-time                           /blog/psychology-of-watching-money-tick                    301
+/blog/the-real-cost-of-your-time.html                      /blog/psychology-of-watching-money-tick                    301

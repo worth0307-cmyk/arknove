@@ -17,6 +17,7 @@ A free live salary calculator that watches your earnings tick up second by secon
 ├── ads.txt                 # Google AdSense
 ├── robots.txt
 ├── sitemap.xml
+├── _redirects              # 已合并文章的 301 / 301s for merged-away posts
 └── og-image.png            # 社交分享图 / Open Graph image
 ```
 
@@ -29,10 +30,13 @@ canonical、hreflang、sitemap 和站内链接都必须使用这一形式。
 而 `/privacy.html` 会 **308** 单跳到 `/privacy`。Google 对 308 和 301 的处理完全
 一致,无需干预。
 
-本项目曾加过 `_redirects` 想把这些跳转显式声明为 301。它**确实生效**——状态码从内置
-的 308 变为 301,加回和删除时可稳定复现。但 308 已经正确,改成 301 没有任何收益,而
-`/_redirects` 本身返回 200(可被抓取),所以已移除。若日后要加,先想清楚要解决什么
-问题:仅仅为了把 308 换成 301 是不值得的。
+`_redirects` **只用于内置行为覆盖不到的跳转**,也就是页面被删除或合并、URL 不再对应
+任何文件的情况——内置跳转只负责 `.html` 去后缀,删掉的页面会直接 404 并丢掉已累积的
+索引信号。当前它承载的是三篇被合并文章的 301。
+
+不要用它去重写内置跳转已经处理好的路径。此前试过一次,规则**确实生效**(状态码从内置
+的 308 变为 301,增删可稳定复现),但 Google 对 308 和 301 处理一致,等于只换了个状态码,
+毫无收益,后来删掉了。
 
 Canonical URLs are **extensionless** (`/privacy`, `/about.zh`). Every canonical
 tag, hreflang annotation, sitemap entry, and internal link must use that form.
@@ -41,12 +45,16 @@ Redirects are handled by Cloudflare Pages itself: `/privacy` is served from
 `privacy.html` on disk, and `/privacy.html` makes a single **308** hop to
 `/privacy`. Google treats 308 and 301 identically, so nothing needs doing.
 
-A `_redirects` file was tried here to declare those hops explicitly as 301s.
-It **did take effect** — the status code went from the built-in 308 to 301,
-reproducibly, on adding and removing it. But 308 was already correct, so the
-change bought nothing, and `/_redirects` itself returned 200 (crawlable), so
-it was removed. If you reach for one again, be clear what it is solving:
-turning a 308 into a 301 is not worth it.
+`_redirects` is **only for hops the built-in behavior cannot make** — pages that
+were deleted or merged away, whose URLs no longer map to any file. The built-in
+redirect only strips `.html`; a removed page just 404s and throws away whatever
+index signal it had earned. It currently carries the 301s for three merged posts.
+
+Do not use it to restate hops the built-in behavior already handles. That was
+tried once and the rules **did take effect** (the status code went from the
+built-in 308 to 301, reproducibly, on adding and removing the file), but Google
+treats 308 and 301 identically, so it changed a status code and nothing else.
+It was removed again.
 
 ## 部署 / Deployment
 

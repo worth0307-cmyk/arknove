@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://arknove.com/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://arknove.com/" />
@@ -93,49 +93,28 @@
 
   <url>
     <loc>https://arknove.com/blog/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://arknove.com/blog/how-much-is-an-hour-of-your-life-worth</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://arknove.com/blog/hidden-costs-that-shrink-your-real-hourly-wage</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://arknove.com/blog/use-your-hourly-rate-to-make-better-decisions</loc>
-    <lastmod>2026-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://arknove.com/blog/the-real-cost-of-your-time</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://arknove.com/blog/calculate-true-hourly-rate</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://arknove.com/blog/psychology-of-watching-money-tick</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
